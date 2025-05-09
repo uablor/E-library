@@ -1,0 +1,7 @@
+{
+  "files": [], // ไม่ระบุไฟล์โดยตรง, ใช้ references แทน
+  "references": [
+    { "path": "./tsconfig.app.json" }, // อ้างอิงไปยัง tsconfig สำหรับแอปพลิเคชัน
+    { "path": "./tsconfig.node.json" } // อ้างอิงไปยัง tsconfig สำหรับ Node.js
+  ]
+}

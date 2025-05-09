@@ -1,0 +1,28 @@
+{
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.node.tsbuildinfo", // กำหนดที่เก็บข้อมูลการสร้างของ TypeScript
+    "module": "ESNext", // กำหนดชนิดของโมดูลที่ใช้ เป็น ESNext (โมดูล ES เวอร์ชันล่าสุด)
+    "skipLibCheck": true, // ข้ามการตรวจสอบประเภทในไลบรารีเพื่อเพิ่มประสิทธิภาพ
+    "noEmit": true, // ไม่ให้ TypeScript สร้างไฟล์ JavaScript
+    "composite": true, // รองรับโครงการที่มีหลาย tsconfig
+    "allowImportingTsExtensions": true, // อนุญาตให้ import ไฟล์ .ts
+    "isolatedModules": true, // คอมไพล์ไฟล์แยกกัน (สำหรับการใช้งานกับเครื่องมือที่ไม่รองรับการคอมไพล์หลายไฟล์พร้อมกัน)
+    "moduleDetection": "force", // บังคับให้ใช้การตรวจสอบโมดูลตามที่กำหนด
+    "moduleResolution": "node", // วิธีการหาทางของโมดูลตามโครงสร้างของ Node.js
+    "types": ["node"], // รวม type definitions สำหรับ Node.js
+    "strict": true, // เปิดใช้งาน strict mode ซึ่งช่วยตรวจจับข้อผิดพลาด
+    "noUnusedLocals": true, // แจ้งเตือนหากมีตัวแปรที่ไม่ได้ใช้งาน
+    "allowSyntheticDefaultImports": true, // อนุญาตให้ใช้ default imports ถึงแม้ว่าใช้ CommonJS
+    "noUnusedParameters": true, // แจ้งเตือนหากมีพารามิเตอร์ในฟังก์ชันที่ไม่ได้ใช้งาน
+    "noFallthroughCasesInSwitch": true, // ป้องกันการหลุดออกจาก case ใน switch
+    "noUncheckedSideEffectImports": true, // ตรวจสอบการ import ที่อาจมีผลข้างเคียง
+    "target": "ES2022", // เป้าหมายของการคอมไพล์เป็น ECMAScript 2022
+    "lib": ["ES2023"], // ใช้ ECMAScript 2023 และ API DOM
+  },
+  "include": [
+    "vite.config.*", // รวมไฟล์การตั้งค่าของ Vite
+    "vitest.config.*", // รวมไฟล์การตั้งค่าของ Vitest
+    "env.d.ts", // รวมไฟล์ที่เก็บตัวแปรประเภทที่กำหนดเอง
+    "src/**/*" // รวมไฟล์ทั้งหมดในโฟลเดอร์ src
+  ]
+}

@@ -1,0 +1,40 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.dom.json", // ขยายการตั้งค่าจาก tsconfig.dom.json ของ Vue
+  "compilerOptions": {
+    "tsBuildInfoFile": "./node_modules/.tmp/tsconfig.app.tsbuildinfo", // กำหนดที่เก็บข้อมูลการสร้างของ TypeScript
+    "resolveJsonModule": true, // อนุญาตให้ import ไฟล์ JSON เป็นโมดูล
+    "esModuleInterop": true, // เปิดใช้งานการเชื่อมต่อระหว่าง CommonJS และ ESModule
+    "emitDeclarationOnly": true, // สร้างเฉพาะไฟล์ declaration (.d.ts) โดยไม่สร้างไฟล์ JavaScript
+    "composite": true, // รองรับโครงการที่มีหลาย tsconfig
+    "jsx": "preserve", // ใช้การคงรูปแบบ JSX (เหมาะสำหรับโปรเจกต์ที่ใช้ React)
+    "isolatedModules": true, // คอมไพล์ไฟล์แยกกัน
+    "skipLibCheck": true, // ข้ามการตรวจสอบประเภทในไลบรารี
+    "experimentalDecorators": true, // เปิดใช้งาน decorators (เหมาะสำหรับการใช้งานกับ TypeScript ใน Vue หรือ Angular)
+    "emitDecoratorMetadata": true, // เปิดใช้งานการสร้างข้อมูลเมตาของ decorator
+    "allowSyntheticDefaultImports": true, // อนุญาตให้ใช้ default imports ถึงแม้ว่าใช้ CommonJS
+    "baseUrl": ".", // ตั้งค่าพื้นฐานสำหรับ paths
+    "paths": {
+      "@/*": ["./src/*"] // ใช้ alias "@" เพื่อเข้าถึงไฟล์ใน src
+    },
+    "noEmit": true, // ไม่สร้างไฟล์ JavaScript
+    "strict": true, // เปิดใช้งาน TypeScript strict mode
+    "noUnusedParameters": true, // แจ้งเตือนพารามิเตอร์ที่ไม่ได้ใช้งาน
+    "noFallthroughCasesInSwitch": true, // ป้องกันการหลุดจาก case ใน switch
+    "lib": ["ES2020", "DOM", "DOM.Iterable"], // ใช้ ECMAScript 2020 และ API DOM
+    "types": ["node"], // รวม type definitions สำหรับ Node.js
+    "target": "ES2020", // เป้าหมายของการคอมไพล์เป็น ECMAScript 2020
+    "module": "ESNext", // ใช้โมดูล ESNext
+    "allowImportingTsExtensions": true, // อนุญาตให้ import ไฟล์ที่มีส่วนขยาย .ts
+    "noUnusedLocals": true, // แจ้งเตือนตัวแปรที่ไม่ได้ใช้งาน
+    "noUncheckedSideEffectImports": true, // ตรวจสอบการ import ที่อาจมีผลข้างเคียง
+    "useDefineForClassFields": true, // ใช้ `define` สำหรับการกำหนดฟิลด์ในคลาส
+    "moduleResolution": "Bundler", // ใช้การแก้ไขโมดูลในรูปแบบ Bundler
+    "moduleDetection": "force" // บังคับให้ตรวจสอบโมดูลอย่างเข้มงวด
+  },
+  "include": [
+    "src/**/*.ts", // รวมไฟล์ TypeScript ในโฟลเดอร์ src
+    "src/**/*.tsx", // รวมไฟล์ TypeScript ที่ใช้ JSX ในโฟลเดอร์ src
+    "src/**/*.vue", // รวมไฟล์ Vue ในโฟลเดอร์ src
+    "src/router/index.ts" // รวมไฟล์ router ของ TypeScript ในโฟลเดอร์ src
+  ]
+}

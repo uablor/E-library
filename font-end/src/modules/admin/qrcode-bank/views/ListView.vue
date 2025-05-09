@@ -1,0 +1,171 @@
+<template>
+    <div>
+        <div class="card">
+            <div class="flex flex-wrap gap-2 align-items-center justify-content-between">
+                <span class="p-input-icon-left w-full sm:w-20rem flex-order-1 sm:flex-order-0">
+                    <h2 class="mb-3">
+                        {{ $t('table.title.qrcode_bank') }}
+                    </h2>
+                </span>
+                <span class="w-full sm:w-auto flex-order-0 sm:flex-order-1 mb-4 sm:mb-0">
+                    <Button 
+                        :label="$t('button.add') + ' ' + $t('messages.qrcode_bank')"
+                        severity="info" 
+                        @click="addQrcodeBank"
+                        :disabled="validationPermissions(GET_PERMISSIONS.BANK_QRCODE.CREATE)"
+                    />
+                </span>
+            </div>
+            <DataTable 
+                :value="state.data.props" 
+                :loading="state.isLoading" 
+                lazy
+                tableStyle="min-width: 50rem"
+                :totalRecords="state.data.total"
+                @page="onPageChange"
+                paginator
+                :first="first"
+                :rows="setStateFilter.limit"
+                paginatorTemplate="FirstPageLink PrevPageLink PageLinks NextPageLink LastPageLink CurrentPageReport RowsPerPageDropdown"
+                :rowsPerPageOptions="[5, 10, 25]"
+                :currentPageReportTemplate="`${$t('table.pagination.show')} {first} ${$t('table.pagination.to')} {last} ${$t('table.pagination.from')} {totalRecords} ${$t('table.pagination.row')}`"
+
+            >
+                <Column field="id" :header="$t('table.header.index')">
+                    <template #body="item">
+                        {{ item.index + 1 }}
+                    </template>
+                </Column>
+                <Column field="filename" :header="$t('table.header.qrcode_bank')" headerStyle="min-width: 8rem" frozen>
+                    <template #body="{ data }">
+                        <Image :src="data.filename" alt="Image" preview style="max-width: 80px;"/>
+                    </template>
+                </Column>
+                <Column headerStyle="width: 10rem">
+                    <template #body="{ data }">
+                        <div class="flex flex-wrap gap-2 btn-right">
+                            <Button 
+                                type="button" 
+                                icon="pi pi-trash" 
+                                rounded 
+                                severity="danger"
+                                @click="confirmDelete(data.id)"
+                                :disabled="validationPermissions(GET_PERMISSIONS.BANK_QRCODE.DELETE)"
+                            />
+                        </div>
+                    </template>
+                </Column>
+            </DataTable>
+        </div>
+
+        <add-qrcode
+            ref="createForm" 
+            :form="form"
+            :state="state"
+            :register="register"
+            @on-success="onSuccess"
+        />
+    </div>
+  </template>
+  
+  <script setup lang="ts">
+    import { onMounted, computed, ref } from 'vue';
+    import DataTable, { type DataTablePageEvent } from 'primevue/datatable';
+    import Column from 'primevue/column';
+    import Button from 'primevue/button';
+    import { adminQrCodeBankStore } from '../stores/store';
+    import { useRoute, useRouter } from 'vue-router';
+    import Image from 'primevue/image';
+    import AddQrcode from '../components/Add.Component.vue';
+    import { PEntity } from '../entities/entity';
+    import { useConfirm } from 'primevue/useconfirm';
+    import { useI18n } from 'vue-i18n';
+    import { useToast } from 'primevue/usetoast';
+    import { validationPermissions } from '@/common/utils/validation-permissions';
+    import { GET_PERMISSIONS } from '@/common/utils/const';
+
+    const { push } = useRouter()
+    const { query } = useRoute()
+    const confirm = useConfirm();
+    const toast = useToast();
+    const { t } = useI18n();
+    const { form, getAll, state, setStateFilter, register, remove } = adminQrCodeBankStore();
+
+    const createForm = ref();
+    const addQrcodeBank = () => {
+        createForm.value.visible = true;
+    }
+
+    async function onPageChange(event: DataTablePageEvent) {
+        setStateFilter.page = event.page + 1;
+        setStateFilter.limit = event.rows;
+
+        const { page, limit } = setStateFilter
+        push({ name: 'admin.qrcode.bank', query: { page, limit} })
+        
+        await getAll();
+    }
+
+    const onSuccess = async () => {
+        await initComponent();
+    }
+
+    const first = computed(() => {
+        let result: number = 0
+
+        if(setStateFilter.page && setStateFilter.limit){
+            result = (setStateFilter.page - 1) * setStateFilter.limit
+        }
+        return result
+    })
+
+    async function initComponent() {
+        if (Object.keys(query).length !== 0) {
+            setStateFilter.page = query.page ? Number(query.page) : 1
+            setStateFilter.limit = query.limit ? Number(query.limit) : 10
+            
+            push({
+                query: {
+                    page: setStateFilter.page,
+                    limit: setStateFilter.limit
+                }
+            })
+        }
+        await getAll()
+    }
+
+    const confirmDelete = async (id: PEntity) => {
+        confirm.require({
+            message: t('confirmDelete.message'),
+            header: t('confirmDelete.header'),
+            rejectLabel: t('confirmDelete.rejectLabel'),
+            acceptLabel: t('confirmDelete.acceptLabel'),
+            rejectClass: 'p-button-secondary p-button-outlined',
+            acceptClass: 'p-button-danger',
+            accept: async () => {
+                await remove(id);
+                
+                toast.add({ severity: 'success', summary: t('toast.summary.delete'), detail: t('toast.detail.delete'), life: 3000 });
+            },
+            reject: () => {
+                toast.add({ severity: 'error', summary: t('toast.summary.cancel_delete'), detail: t('toast.detail.cancel_delete'), life: 3000 });
+            }
+        });
+    }    
+    
+    onMounted(async () => {
+        await initComponent();
+    })
+</script>
+
+<style scoped>
+    .card-first {
+      height: 100px;
+      border: 1px solid #ccc;
+      padding: 10px;
+    }
+    .btn-right {
+        display: flex;
+        justify-content: flex-end;
+    }
+</style>
