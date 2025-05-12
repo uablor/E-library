@@ -1,0 +1,46 @@
+{
+    "sourceFile": "src/components/layouts/AppLayout.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 7,
+            "patches": [
+                {
+                    "date": 1747023455500,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747023460894,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     <AppTopbar/>\r\n     <div>\r\n         <AppNavbar/>\r\n     </div>\r\n- \r\n+     <div></div>\r\n       <main class=\"layout-main-container surface-ground container mx-auto\">\r\n         <router-view v-slot=\"{Component}\">\r\n           <template v-if=\"Component\">\r\n             <Suspense>\r\n"
+                },
+                {
+                    "date": 1747023466326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n <script setup lang=\"ts\">\r\n  import AppTopbar from '../layouts/AppTopbar.vue'\r\n  import AppNavbar from '../layouts/AppNavbar.vue'\r\n  import AppFooter from '../layouts/AppFooter.vue'\r\n+ \r\n   import { Suspense } from 'vue'\r\n   // import AppSidebar from './AppSidebar\r\n //   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n   import { ref } from 'vue';\r\n@@ -14,9 +15,11 @@\n     <AppTopbar/>\r\n     <div>\r\n         <AppNavbar/>\r\n     </div>\r\n-     <div></div>\r\n+     <div>\r\n+\r\n+     </div>\r\n       <main class=\"layout-main-container surface-ground container mx-auto\">\r\n         <router-view v-slot=\"{Component}\">\r\n           <template v-if=\"Component\">\r\n             <Suspense>\r\n"
+                },
+                {
+                    "date": 1747023474250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <script setup lang=\"ts\">\r\n  import AppTopbar from '../layouts/AppTopbar.vue'\r\n  import AppNavbar from '../layouts/AppNavbar.vue'\r\n  import AppFooter from '../layouts/AppFooter.vue'\r\n- \r\n+ import AppSidebar from './AppSidebar.vue'\r\n   import { Suspense } from 'vue'\r\n   // import AppSidebar from './AppSidebar\r\n //   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n   import { ref } from 'vue';\r\n"
+                },
+                {
+                    "date": 1747023487696,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <script setup lang=\"ts\">\r\n  import AppTopbar from '../layouts/AppTopbar.vue'\r\n  import AppNavbar from '../layouts/AppNavbar.vue'\r\n  import AppFooter from '../layouts/AppFooter.vue'\r\n- import AppSidebar from './AppSidebar.vue'\r\n+ import AppSidebar from '../AppSidebar.vue'\r\n   import { Suspense } from 'vue'\r\n   // import AppSidebar from './AppSidebar\r\n //   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n   import { ref } from 'vue';\r\n@@ -16,9 +16,9 @@\n     <div>\r\n         <AppNavbar/>\r\n     </div>\r\n      <div>\r\n-\r\n+<AppSidebar\r\n      </div>\r\n       <main class=\"layout-main-container surface-ground container mx-auto\">\r\n         <router-view v-slot=\"{Component}\">\r\n           <template v-if=\"Component\">\r\n"
+                },
+                {
+                    "date": 1747023499883,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n     <div>\r\n         <AppNavbar/>\r\n     </div>\r\n      <div>\r\n-<AppSidebar\r\n+<AppSidebar/>\r\n      </div>\r\n       <main class=\"layout-main-container surface-ground container mx-auto\">\r\n         <router-view v-slot=\"{Component}\">\r\n           <template v-if=\"Component\">\r\n"
+                },
+                {
+                    "date": 1747023509212,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,39 +1,39 @@\n <script setup lang=\"ts\">\r\n- import AppTopbar from '../layouts/AppTopbar.vue'\r\n- import AppNavbar from '../layouts/AppNavbar.vue'\r\n- import AppFooter from '../layouts/AppFooter.vue'\r\n- import AppSidebar from '../AppSidebar.vue'\r\n-  import { Suspense } from 'vue'\r\n-  // import AppSidebar from './AppSidebar\r\n+import AppTopbar from '../layouts/AppTopbar.vue'\r\n+import AppNavbar from '../layouts/AppNavbar.vue'\r\n+import AppFooter from '../layouts/AppFooter.vue'\r\n+import AppSidebar from '../l'\r\n+import { Suspense } from 'vue'\r\n+// import AppSidebar from './AppSidebar\r\n //   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n-  import { ref } from 'vue';\r\n-  const toggle = ref<boolean>(true)\r\n+import { ref } from 'vue';\r\n+const toggle = ref<boolean>(true)\r\n </script>\r\n \r\n <template>\r\n   <div>\r\n-    <AppTopbar/>\r\n+    <AppTopbar />\r\n     <div>\r\n-        <AppNavbar/>\r\n+      <AppNavbar />\r\n     </div>\r\n-     <div>\r\n-<AppSidebar/>\r\n-     </div>\r\n-      <main class=\"layout-main-container surface-ground container mx-auto\">\r\n-        <router-view v-slot=\"{Component}\">\r\n-          <template v-if=\"Component\">\r\n-            <Suspense>\r\n-              <component :is=\"Component\"></component>\r\n-              <template #fallback>\r\n-                <loading-component />\r\n-              </template>\r\n-            </Suspense>\r\n-          </template>\r\n-        </router-view>\r\n-      </main>\r\n-      <AppFooter />\r\n-  \r\n+    <div>\r\n+      <AppSidebar />\r\n+    </div>\r\n+    <main class=\"layout-main-container surface-ground container mx-auto\">\r\n+      <router-view v-slot=\"{ Component }\">\r\n+        <template v-if=\"Component\">\r\n+          <Suspense>\r\n+            <component :is=\"Component\"></component>\r\n+            <template #fallback>\r\n+              <loading-component />\r\n+            </template>\r\n+          </Suspense>\r\n+        </template>\r\n+      </router-view>\r\n+    </main>\r\n+    <AppFooter />\r\n+\r\n     <!-- <div class=\"layout-mask\" @click=\"() => (toggle = !toggle)\"></div> -->\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747023514541,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <script setup lang=\"ts\">\r\n import AppTopbar from '../layouts/AppTopbar.vue'\r\n import AppNavbar from '../layouts/AppNavbar.vue'\r\n import AppFooter from '../layouts/AppFooter.vue'\r\n-import AppSidebar from '../l'\r\n+import AppSidebar from '../layouts/AppSidebar.vue'\r\n import { Suspense } from 'vue'\r\n // import AppSidebar from './AppSidebar\r\n //   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n import { ref } from 'vue';\r\n"
+                }
+            ],
+            "date": 1747023455500,
+            "name": "Commit-0",
+            "content": "<script setup lang=\"ts\">\r\n import AppTopbar from '../layouts/AppTopbar.vue'\r\n import AppNavbar from '../layouts/AppNavbar.vue'\r\n import AppFooter from '../layouts/AppFooter.vue'\r\n  import { Suspense } from 'vue'\r\n  // import AppSidebar from './AppSidebar\r\n//   import LoadingComponent from '../customComponents/LoadingComponent.vue'\r\n  import { ref } from 'vue';\r\n  const toggle = ref<boolean>(true)\r\n</script>\r\n\r\n<template>\r\n  <div>\r\n    <AppTopbar/>\r\n    <div>\r\n        <AppNavbar/>\r\n    </div>\r\n \r\n      <main class=\"layout-main-container surface-ground container mx-auto\">\r\n        <router-view v-slot=\"{Component}\">\r\n          <template v-if=\"Component\">\r\n            <Suspense>\r\n              <component :is=\"Component\"></component>\r\n              <template #fallback>\r\n                <loading-component />\r\n              </template>\r\n            </Suspense>\r\n          </template>\r\n        </router-view>\r\n      </main>\r\n      <AppFooter />\r\n  \r\n    <!-- <div class=\"layout-mask\" @click=\"() => (toggle = !toggle)\"></div> -->\r\n  </div>\r\n</template>\r\n\r\n<style scoped lang=\"css\"></style>"
+        }
+    ]
+}
