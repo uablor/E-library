@@ -1,0 +1,65 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings",
+        "language": "Language",
+        "english": "English",
+        "lao": "Lao"
+    },
+    "navbar":{
+        "mybooks": "My Books",
+        "browse": "Browse",
+        "myBook": "My Books",
+        "browses": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up",
+        "all":"all",
+        "search":"search",
+        "login":"Log in",
+        "signup":"Sign up"
+    },
+    "bookdetail": {
+        "title": "The Idea of Gujarat",
+        "author": "Amitava Ghosh",
+        "description": "An edition of The Idea of Gujarat: History, Ethnography and Text (2010)",
+        "published": "Published",
+        "language": "Language",
+        "pages": "Pages",
+        "isbn": "ISBN",
+        "publisher": "Publisher",
+        "publish_date": "Publish_date",
+        "want_to_read": "want to read",
+        "Currently_reading": "Currently reading.",
+        "have_read": "have read.",
+        "rating": "ratings",
+        "bookdetail": "Book Details",
+        "edition_note": "Edition notes",
+        "classifications": "Classifications",
+        "the_Physical_Object": "The Physical Object",
+        "etition_Identifiers": "Edition Identifiers",
+        "Work Identifiers": "Edition Identifiers"
+
+    },
+    "trendingbooks": {
+        "title": "Trending Books: Now",
+        "description": "See what readers from the community are adding to their bookshelves.",
+        "now": "Now",
+        "today": "Today",
+        "thisweek": "This Week",
+        "thismonth": "This Month",
+        "thisyear": "This Year",
+        "alltime": "All Time",
+        "read": "Read",
+        "not_in_library": "Not in Library"
+    },
+    "home":{
+        "trendingbooks":"Trending Books",
+        "classic":"Classic books",
+        "readinnow":"Read Now",
+        "not in library":"Not in Library"
+    }
+
+
+}

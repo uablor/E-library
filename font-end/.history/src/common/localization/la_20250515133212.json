@@ -1,0 +1,72 @@
+{
+    "topbar": {
+        "title": "ວິທະຍາໄລ ເຄວສ",        
+        "settings": "ການຕັ້ງຄ່າ",
+        "language": "ພາສາ",
+         "english": "ພາສາອັງກິດ",
+        "lao": "ພາສາລາວ",
+        "darkmode": "ແບບມືດ",
+        "lightmode": "ແບບເສຽນ"
+    },
+      "navbar":{
+        "mybooks": "ປື້ມຂອງຂ້ອຍ",
+        "browse": "ຄົ້ນຫາ",
+        "mybook": "ປື້ມຂອງຂ້ອຍ",
+        "browses": "ຄົ້ນຫາ",
+        "log": "ເຂົ້າສູ່",
+        "in": "ລະບົບ",
+        "sign": "ສະໝັກ",
+        "up": "ບັນຊີ",
+        "all":"ທັງໝົດ",
+        "search":"ຄົ້ນຫາ",
+        "login":"ເຂົ້າສູ່ລະບົບ",
+        "signup":"ສະໝັກບັນຊີ"
+    },
+     "trendingbooks": {
+        "title": "ປຶ້ມທີ່ກຳລັງມາແຮງ: ດຽວນີ້",
+        "description": "ເບິ່ງສິ່ງທີ່ຜູ້ອ່ານຈາກຊຸມຊົນກໍາລັງເພີ່ມໃສ່ຊັ້ນວາງຫນັງສືຂອງພວກເຂົາ.",
+        "now": "ດຽວນີ້",
+        "today": "ມື້ນີ້",
+        "thisweek": "ທິດນີ້",
+        "thismonth": "ເດືອນນີ້",
+        "thisyear": "ປີນີ້",
+        "alltime": "ທຸກເວລາ",
+        "read": "ອ່ານ",
+        "not_in_library": "ບໍ່ມີໃນຫໍສະໝຸດ"
+    },
+    "bookdetail": {
+  "preview_only": "ສະແດງຕົວຢ່າງເທົ່ານັ້ນ",
+  "search_inside": "ຊອກຫາຂ້າງໃນ",
+  "already_read": "ອ່ານແລ້ວ",
+  "When_did_you_finish_this_book": "ເຈົ້າອ່ານປື້ມນີ້ຈົບເມື່ອໃດ?",
+  "review": "ທົບທວນ",
+  "notes": "ໝາຍເຫດ",
+  "share": "ແບ່ງປັນ",
+
+  "title": "The Idea of Gujarat",
+  "author": "ອາມິຕະວາ ກໍໂຊ",
+  "description": "ສະບັບຂອງ The Idea of Gujarat: History, Ethnography and Text (2010)",
+  "published": "ຕີພິມ",
+  "language": "ພາສາ",
+  "pages": "ໜ້າເຈ້ຍທັງໝົດມີ",
+  "isbn": "ISBN",
+  "publisher": "ສະນັກພິມ",
+  "publish_date": "ວັນທີຕີພິມ",
+  "want_to_read": "ຢາກອ່ານ",
+  "Currently_reading": "ປະຈຸບັນເເມ່ນກຳລັງອ່ານ",
+  "have_read": "ອ່ານແລ້ວ",
+  "rating": "ຄະແນນປະເມີນ",
+  "bookdetail": "ລາຍລະອຽດປື້ມ",
+  "edition_note": "ຫມາຍເຫດສຳນວນ",
+  "classifications": "ການແບ່ງປະເພດ",
+  "the_Physical_Object": "ວັດຖຸທາງກາຍ",
+  "etition_Identifiers": "ລະຫັດສຳນວນ",
+  "work_Identifiers": "ລະຫັດຜົນງານ"
+},
+      "home":{
+        "trendingbooks":"ປຶ້ມທີ່ກຳລັງມາແຮງ",
+        "classic":"ຄລາສສິກ",
+        "readinnow":"ອ່ານດຽວນີ້",
+        "not in library":"ບໍ່ຢູ່ໃນຫ້ອງສະໝຸດ"
+    }
+}

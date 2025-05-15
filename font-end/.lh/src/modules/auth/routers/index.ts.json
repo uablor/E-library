@@ -1,0 +1,54 @@
+{
+    "sourceFile": "src/modules/auth/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 9,
+            "patches": [
+                {
+                    "date": 1747292926790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747292936007,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n-export const authRoute: RouteRecordRaw[] = [\r\n+export const cliauthRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n"
+                },
+                {
+                    "date": 1747292942307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,13 @@\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n-export const cliauthRoute: RouteRecordRaw[] = [\r\n+export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n-    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n+    meta: { label: \"ເimport { ClientRoute } from './../../../router/router-client';\r\n+ຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747292952166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n-export const ClientRoute: RouteRecordRaw[] = [\r\n+export const ClientRouteRegister: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n"
+                },
+                {
+                    "date": 1747292969809,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,7 +13,7 @@\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເimport { ClientRoute } from './../../../router/router-client';\r\n-ຂົ້າລະບົບ\" },\r\n+ຂົ້າລະບົບ\" }\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747292983000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,7 @@\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n-    meta: { label: \"ເimport { ClientRoute } from './../../../router/router-client';\r\n-ຂົ້າລະບົບ\" }\r\n+    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n-];\r\n+];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747292989531,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n   },\r\n ];\r\n export const ClientRouteRegister: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/login\",\r\n+    path: \"/client/login\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747292995612,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   },\r\n ];\r\n export const ClientRouteRegister: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/login\",\r\n-    name: \"login\",\r\n+    path: \"/client/register\",\r\n+    name: \"re\",\r\n     component: () => import(\"../views/Login.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747293007191,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n ];\r\n export const ClientRouteRegister: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n-    name: \"re\",\r\n-    component: () => import(\"../views/Login.vue\"),\r\n+    name: \"register\",\r\n+    component: () => import(\"../\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747293023657,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n export const ClientRouteRegister: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n     name: \"register\",\r\n-    component: () => import(\"../\"),\r\n-    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n+    component: () => import(\"../views/Register.vue\"),\r\n+    meta: { label: \"ສະໝັກບັນຊີ\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1747292926790,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from \"vue-router\";\r\n\r\nexport const authRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/login\",\r\n    name: \"login\",\r\n    component: () => import(\"../views/Login.vue\"),\r\n    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n  },\r\n];\r\nexport const authRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/login\",\r\n    name: \"login\",\r\n    component: () => import(\"../views/Login.vue\"),\r\n    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n  },\r\n];\r\n"
+        }
+    ]
+}

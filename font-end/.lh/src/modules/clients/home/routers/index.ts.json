@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/modules/clients/home/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1747046800858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747046809991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n-    component: () => import(\"../views/Login.vue\"),\r\n+    component: () => import(\"../e\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046817633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n-    component: () => import(\"../e\"),\r\n+    component: () => import(\"../viewse\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046823877,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n-    component: () => import(\"../viewse\"),\r\n+    component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046837232,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/login\",\r\n     name: \"login\",\r\n-    component: () => import(\"../views/HomePage.vue\"),\r\n+    component: () => import(\"../views/\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046852142,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/login\",\r\n+    path: \"/c/login\",\r\n     name: \"login\",\r\n-    component: () => import(\"../views/\"),\r\n+    component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046857413,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/c/login\",\r\n+    path: \"/client/home\",\r\n     name: \"login\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747046871411,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/home\",\r\n-    name: \"login\",\r\n+    name: \"cllihome\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"ເຂົ້າລະບົບ\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046881799,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n \r\n export const authRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/home\",\r\n-    name: \"cllihome\",\r\n+    name: \"cllient-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n-    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n+    meta: { label: \"cl\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046886871,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   {\r\n     path: \"/client/home\",\r\n     name: \"cllient-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n-    meta: { label: \"cl\" },\r\n+    meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046990828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,11 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const authRoute: RouteRecordRaw[] = [\r\n+export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/home\",\r\n     name: \"cllient-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n-    meta: { label: \"cllient.home\" },\r\n+    meta: { label: \"cimport { HomeRoute } from '@/modules/clients/home/routers';\r\n+llient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747046997793,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,10 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const HomeRoute: RouteRecordRaw[] = [\r\n+export const Home: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/home\",\r\n     name: \"cllient-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n-    meta: { label: \"cimport { HomeRoute } from '@/modules/clients/home/routers';\r\n-llient.home\" },\r\n+    meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747047087189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const Home: RouteRecordRaw[] = [\r\n+export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/home\",\r\n-    name: \"cllient-home\",\r\n+    name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747047794498,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/home\",\r\n+    path: \"/home\",\r\n     name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747047824528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/home\",\r\n+    path: \"c/home\",\r\n     name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747047848908,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"c/home\",\r\n+    path: \"/client/home\",\r\n     name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n"
+                }
+            ],
+            "date": 1747046800858,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from \"vue-router\";\r\n\r\nexport const authRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/login\",\r\n    name: \"login\",\r\n    component: () => import(\"../views/Login.vue\"),\r\n    meta: { label: \"ເຂົ້າລະບົບ\" },\r\n  },\r\n];\r\n"
+        }
+    ]
+}

@@ -1,0 +1,14 @@
+{
+    "topbar": {
+        "title": "ວິທະຍາໄລ ເຄວສ",        
+        "settings": "ການຕັ້ງຄ່າ"
+    },
+      "navbar":{
+        "myBooks": "ປື້ມຂອງ",
+        "browse": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up"
+    }
+}

@@ -1,0 +1,16 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings"
+    },
+    "navbar":{
+        "myBooks": "My Books",
+        "browse": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up",
+        "all":"ືທັງໝົດ"
+        
+    }
+}

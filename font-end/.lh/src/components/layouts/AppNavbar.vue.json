@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 47,
+            "activePatchIndex": 86,
             "patches": [
                 {
                     "date": 1747024208506,
@@ -196,6 +196,162 @@
                 {
                     "date": 1747044727273,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,9 @@\n \r\n         <!-- Dropdown Search Form -->\r\n         <div\r\n           v-if=\"showDropdown\"\r\n-          class=\"absolute right-0 mt-2 bg-white shadow-lg rounded-md sm:-mt-20 w-[250px] p-3 z-50\"\r\n+          class=\"absolute right-0 mt-2 bg-white shadow-lg rounded-md  w-[250px] p-3 z-50\"\r\n         >\r\n           <div class=\"flex flex-col space-y-2\">\r\n             <select\r\n               class=\"bg-green-600 text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded\"\r\n"
+                },
+                {
+                    "date": 1747142315776,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -63,15 +63,10 @@\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n \r\n             </div>\r\n \r\n-            <!-- <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-                <option value=\"all\"><i>Browse</i></option>\r\n-            </select>\r\n+          \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                My books\r\n-            </button> -->\r\n-            <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                 Log in\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n"
+                },
+                {
+                    "date": 1747284656473,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                        My books\r\n+                       \r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n                         <option value=\"all\"><i>Browse</i></option>\r\n                     </select>\r\n"
+                },
+                {
+                    "date": 1747284807761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                       \r\n+                       {{ $t('top.mybooks') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n                         <option value=\"all\"><i>Browse</i></option>\r\n                     </select>\r\n"
+                },
+                {
+                    "date": 1747284813710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                       {{ $t('top.mybooks') }}\r\n+                       {{ $t('topbar.title') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n                         <option value=\"all\"><i>Browse</i></option>\r\n                     </select>\r\n"
+                },
+                {
+                    "date": 1747284858467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                       {{ $t('topbar.title') }}\r\n+                       {{ $t('navbar.title') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n                         <option value=\"all\"><i>Browse</i></option>\r\n                     </select>\r\n"
+                },
+                {
+                    "date": 1747284878239,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,12 +8,12 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                       {{ $t('navbar.title') }}\r\n+                       {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-                        <option value=\"all\"><i>Browse</i></option>\r\n+                        <option value=\"all\"><i>{{ $t('navbar.mybooks') }}</i></option>\r\n                     </select>\r\n \r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1747284884622,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-                        <option value=\"all\"><i>{{ $t('navbar.mybooks') }}</i></option>\r\n+                        <option value=\"all\"><i>{{ $t('navbar.ิ') }}</i></option>\r\n                     </select>\r\n \r\n                 </div>\r\n             </div>\r\n"
+                },
+                {
+                    "date": 1747284996676,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,9 @@\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-                        <option value=\"all\"><i>{{ $t('navbar.ิ') }}</i></option>\r\n+                        <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n                     </select>\r\n \r\n                 </div>\r\n             </div>\r\n@@ -40,9 +40,9 @@\n           <div class=\"flex flex-col space-y-2\">\r\n             <select\r\n               class=\"bg-green-600 text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded\"\r\n             >\r\n-              <option value=\"all\">All</option>\r\n+              <option value=\"all\"></option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n               placeholder=\"Search..........\"\r\n"
+                },
+                {
+                    "date": 1747285025834,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n           <div class=\"flex flex-col space-y-2\">\r\n             <select\r\n               class=\"bg-green-600 text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded\"\r\n             >\r\n-              <option value=\"all\"></option>\r\n+              <option value=\"all\">{{ $t('navbar.browse') }}</option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n               placeholder=\"Search..........\"\r\n"
+                },
+                {
+                    "date": 1747285093702,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -40,9 +40,9 @@\n           <div class=\"flex flex-col space-y-2\">\r\n             <select\r\n               class=\"bg-green-600 text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded\"\r\n             >\r\n-              <option value=\"all\">{{ $t('navbar.browse') }}</option>\r\n+              <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n               placeholder=\"Search..........\"\r\n@@ -55,9 +55,9 @@\n             </div>\r\n             <div class=\" hidden lg:block  flex-col sm:flex-row items-center  w-full sm:w-auto mb-3 sm:mb-0  search-all\">\r\n                 <select\r\n                     class=\"custom-select bg-green-600 all-input shadow-md  text-white px-2 py-1 h-9 focus:outline-none cursor-pointer w-full sm:w-auto\">\r\n-                    <option value=\"all\">All</option>\r\n+                    <option value=\"all\">{{ $t('navbar.browse') }}</option>\r\n                 </select>\r\n \r\n                 <input type=\"text\" placeholder=\"Search..........\"\r\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n"
+                },
+                {
+                    "date": 1747285099943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -55,9 +55,9 @@\n             </div>\r\n             <div class=\" hidden lg:block  flex-col sm:flex-row items-center  w-full sm:w-auto mb-3 sm:mb-0  search-all\">\r\n                 <select\r\n                     class=\"custom-select bg-green-600 all-input shadow-md  text-white px-2 py-1 h-9 focus:outline-none cursor-pointer w-full sm:w-auto\">\r\n-                    <option value=\"all\">{{ $t('navbar.browse') }}</option>\r\n+                    <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n                 </select>\r\n \r\n                 <input type=\"text\" placeholder=\"Search..........\"\r\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n"
+                },
+                {
+                    "date": 1747285129990,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,8 +45,9 @@\n             </select>\r\n             <input\r\n               type=\"text\"\r\n               placeholder=\"Search..........\"\r\n+              {{ $t('navbar.browse') }}\r\n               class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded\"\r\n             />\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747285137678,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -45,9 +45,9 @@\n             </select>\r\n             <input\r\n               type=\"text\"\r\n               placeholder=\"Search..........\"\r\n-              {{ $t('navbar.browse') }}\r\n+             \r\n               class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded\"\r\n             />\r\n           </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747285143349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n               <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n-              placeholder=\"Search..........\"\r\n+              placeholder=\"{{ $t('navbar.browse') }}..........\"\r\n              \r\n               class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded\"\r\n             />\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1747285184758,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n               <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n-              placeholder=\"{{ $t('navbar.browse') }}..........\"\r\n+              :placeholder=\"$t('navbar.browse') + '..........'\"\r\n              \r\n               class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded\"\r\n             />\r\n           </div>\r\n"
+                },
+                {
+                    "date": 1747285211009,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -44,9 +44,9 @@\n               <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n             </select>\r\n             <input\r\n               type=\"text\"\r\n-              :placeholder=\"$t('navbar.browse') + '..........'\"\r\n+              :placeholder=\"$t('navbar.search') + '..........'\"\r\n              \r\n               class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded\"\r\n             />\r\n           </div>\r\n@@ -59,9 +59,9 @@\n                     class=\"custom-select bg-green-600 all-input shadow-md  text-white px-2 py-1 h-9 focus:outline-none cursor-pointer w-full sm:w-auto\">\r\n                     <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n                 </select>\r\n \r\n-                <input type=\"text\" placeholder=\"Search..........\"\r\n+                :placeholder=\"$t('navbar.browse') + '..........'\"\r\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n \r\n             </div>\r\n \r\n"
+                },
+                {
+                    "date": 1747285216850,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n                     class=\"custom-select bg-green-600 all-input shadow-md  text-white px-2 py-1 h-9 focus:outline-none cursor-pointer w-full sm:w-auto\">\r\n                     <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n                 </select>\r\n \r\n-                :placeholder=\"$t('navbar.browse') + '..........'\"\r\n+                <input type=\"text\" :placeholder=\"$t('navbar.browse') + '..........'\"\r\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n \r\n             </div>\r\n \r\n"
+                },
+                {
+                    "date": 1747285224864,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -59,9 +59,9 @@\n                     class=\"custom-select bg-green-600 all-input shadow-md  text-white px-2 py-1 h-9 focus:outline-none cursor-pointer w-full sm:w-auto\">\r\n                     <option value=\"all\">{{ $t('navbar.all') }}</option>\r\n                 </select>\r\n \r\n-                <input type=\"text\" :placeholder=\"$t('navbar.browse') + '..........'\"\r\n+                <input type=\"text\" :placeholder=\"$t('navbar.search') + '..........'\"\r\n                     class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 w-full sm:w-64\" />\r\n \r\n             </div>\r\n \r\n"
+                },
+                {
+                    "date": 1747285238646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             </div>\r\n \r\n           \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                Log in\r\n+                {{ $t('navbar.mybooks') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n                 <span> Sign</span><span>up</span>\r\n"
+                },
+                {
+                    "date": 1747285247406,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             </div>\r\n \r\n           \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                {{ $t('navbar.mybooks') }}\r\n+                {{ $t('navbar.log') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n                 <span> Sign</span><span>up</span>\r\n"
+                },
+                {
+                    "date": 1747285261160,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             </div>\r\n \r\n           \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                {{ $t('navbar.log') }}\r\n+                Log in\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n                 <span> Sign</span><span>up</span>\r\n"
+                },
+                {
+                    "date": 1747285352386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,9 +66,9 @@\n             </div>\r\n \r\n           \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                Log in\r\n+                {{ $t('navbar.mybooks') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n                 <span> Sign</span><span>up</span>\r\n"
+                },
+                {
+                    "date": 1747285365943,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -66,13 +66,13 @@\n             </div>\r\n \r\n           \r\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-                {{ $t('navbar.mybooks') }}\r\n+                {{ $t('navbar.login') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n-                <span> Sign</span><span>up</span>\r\n+                <span> {{}}</span><span>up</span>\r\n             </button>\r\n \r\n             <button class=\"cursor-pointer\" @click=\"emit('toggle-sidebar')\">\r\n                 <span\r\n"
+                },
+                {
+                    "date": 1747285371602,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n                 {{ $t('navbar.login') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n-                <span> {{}}</span><span>up</span>\r\n+                <span> {{ $t('navbar.sign') }}</span><span>up</span>\r\n             </button>\r\n \r\n             <button class=\"cursor-pointer\" @click=\"emit('toggle-sidebar')\">\r\n                 <span\r\n"
+                },
+                {
+                    "date": 1747285377963,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n                 {{ $t('navbar.login') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n-                <span> {{ $t('navbar.sign') }}</span><span>up</span>\r\n+                <span> {{ $t('navbar.sign') }}</span><span>{{}}</span>\r\n             </button>\r\n \r\n             <button class=\"cursor-pointer\" @click=\"emit('toggle-sidebar')\">\r\n                 <span\r\n"
+                },
+                {
+                    "date": 1747285490268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -70,9 +70,9 @@\n                 {{ $t('navbar.login') }}\r\n             </button>\r\n             <button\r\n                 class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n-                <span> {{ $t('navbar.sign') }}</span><span>{{}}</span>\r\n+                \r\n             </button>\r\n \r\n             <button class=\"cursor-pointer\" @click=\"emit('toggle-sidebar')\">\r\n                 <span\r\n"
+                },
+                {
+                    "date": 1747285503050,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,10 +69,10 @@\n             <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                 {{ $t('navbar.login') }}\r\n             </button>\r\n             <button\r\n-                class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base flex gap-1\">\r\n-                \r\n+                class=\"bg-white text-green-600 px-3 py-1 rounded hover:bg-green-100 cursor-pointer text-sm sm:text-base \">\r\n+                {{ $t('navbar.signup') }}\r\n             </button>\r\n \r\n             <button class=\"cursor-pointer\" @click=\"emit('toggle-sidebar')\">\r\n                 <span\r\n"
+                },
+                {
+                    "date": 1747285529283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n         </div>\r\n     </header>\r\n     <div class=\" md:hidden flex justify-center gap-5 items-center py-3 container bg-gray-400 mx-auto\">\r\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-            <option value=\"all\"><i>Browse</i></option>\r\n+            <option value=\"all\"><i>{{  }}</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n             My books\r\n         </button>\r\n"
+                },
+                {
+                    "date": 1747285535448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,12 +84,12 @@\n         </div>\r\n     </header>\r\n     <div class=\" md:hidden flex justify-center gap-5 items-center py-3 container bg-gray-400 mx-auto\">\r\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-            <option value=\"all\"><i>{{  }}</i></option>\r\n+            <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-            My books\r\n+           {{ $t('navbar.mybooks') }}\r\n         </button>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747285681462,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,9 @@\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n             <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-           {{ $t('navbar.mybooks') }}\r\n+           {{ $t('navbar.mybook') }}\r\n         </button>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747285697601,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,12 +84,12 @@\n         </div>\r\n     </header>\r\n     <div class=\" md:hidden flex justify-center gap-5 items-center py-3 container bg-gray-400 mx-auto\">\r\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-            <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n+            <option value=\"all\"><i>Browse</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-           {{ $t('navbar.mybook') }}\r\n+            My books\r\n         </button>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747285793451,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -84,9 +84,9 @@\n         </div>\r\n     </header>\r\n     <div class=\" md:hidden flex justify-center gap-5 items-center py-3 container bg-gray-400 mx-auto\">\r\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n-            <option value=\"all\"><i>Browse</i></option>\r\n+            <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n             My books\r\n         </button>\r\n"
+                },
+                {
+                    "date": 1747285800617,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -87,9 +87,9 @@\n         <select class=\" text-white px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n             <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n         </select>\r\n         <button class=\" cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n-            My books\r\n+            {{ $t('navbar.mybooks') }}\r\n         </button>\r\n     </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747286312939,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             <div class=\"block lg:hidden\">\r\n                 <div class=\"ml-24 mt-2\">\r\n                          <div class=\"relative\">\r\n         <div class=\"flex items-center gap-1 text-white cursor-pointer\" @click=\"toggleDropdown\">\r\n-         <i class=\"fas fa-search text-xl w-5 text-black \"></i>\r\n+         <i class=\"fas fa-search text-xl w-5 text-black mb-1 \"></i>\r\n         </div>\r\n \r\n         <!-- Dropdown Search Form -->\r\n         <div\r\n"
+                },
+                {
+                    "date": 1747286324043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n             <div class=\"block lg:hidden\">\r\n                 <div class=\"ml-24 mt-2\">\r\n                          <div class=\"relative\">\r\n         <div class=\"flex items-center gap-1 text-white cursor-pointer\" @click=\"toggleDropdown\">\r\n-         <i class=\"fas fa-search text-xl w-5 text-black mb-1 \"></i>\r\n+         <i class=\"fas fa-search text-xl w-5 text-black mb-2 \"></i>\r\n         </div>\r\n \r\n         <!-- Dropdown Search Form -->\r\n         <div\r\n"
+                },
+                {
+                    "date": 1747298684029,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,9 @@\n         <!-- Left: Logo and Title and input -->\r\n         <div class=\"logo-search\">\r\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n+                    \r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n"
+                },
+                {
+                    "date": 1747298691349,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <!-- Left: Logo and Title and input -->\r\n         <div class=\"logo-search\">\r\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n-                    \r\n+                    <router-link ></router-link>\r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n"
+                },
+                {
+                    "date": 1747298697663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n         <!-- Left: Logo and Title and input -->\r\n         <div class=\"logo-search\">\r\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n-                    <router-link ></router-link>\r\n+                    <router-link to=\"/client/home\">\r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n"
+                },
+                {
+                    "date": 1747298703409,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n                     <router-link to=\"/client/home\">\r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n+                \r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n"
                 }
             ],
             "date": 1747024208506,

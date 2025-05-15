@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/modules/clients/TrendingBooks/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1747223217886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747223224090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/home\",\r\n+    path: \"/client/trendingBooks\",\r\n     name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747223234757,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,10 @@\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/trendingBooks\",\r\n-    name: \"client-home\",\r\n-    component: () => import(\"../views/HomePage.vue\"),\r\n+    name: \"client-trendingBooks\",\r\n+   \r\n+    component: () => import(\"../views/\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747223246700,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n   {\r\n     path: \"/client/trendingBooks\",\r\n     name: \"client-trendingBooks\",\r\n    \r\n-    component: () => import(\"../views/\"),\r\n+    component: () => import(\"../views/TrendingBooks.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747223252231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     path: \"/client/trendingBooks\",\r\n     name: \"client-trendingBooks\",\r\n    \r\n     component: () => import(\"../views/TrendingBooks.vue\"),\r\n-    meta: { label: \"cllient.home\" },\r\n+    meta: { label: \"cllient.trendingBooks\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747223292383,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const HomeRoute: RouteRecordRaw[] = [\r\n+export const TrendingBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/trendingBooks\",\r\n     name: \"client-trendingBooks\",\r\n    \r\n"
+                }
+            ],
+            "date": 1747223217886,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from \"vue-router\";\r\n\r\nexport const HomeRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/client/home\",\r\n    name: \"client-home\",\r\n    component: () => import(\"../views/HomePage.vue\"),\r\n    meta: { label: \"cllient.home\" },\r\n  },\r\n];\r\n"
+        }
+    ]
+}

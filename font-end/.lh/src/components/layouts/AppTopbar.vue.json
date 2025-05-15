@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 3,
+            "activePatchIndex": 11,
             "patches": [
                 {
                     "date": 1747042206914,
@@ -20,6 +20,38 @@
                 {
                     "date": 1747042450542,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n \r\n         <!-- Dropdown -->\r\n         <div\r\n           v-if=\"showDropdown\"\r\n-          class=\"absolute right-0 mt-2 w-50 bg-white rounded-md shadow-lg border z-10 p-2\"\r\n+          class=\"absolute right-0 mt-2 w-50 bg-white rounded-md shadow-lg  z-10 p-2\"\r\n         >\r\n           <label for=\"language\" class=\"block text-gray-700 text-sm mb-1\">Language</label>\r\n           <select\r\n             id=\"language\"\r\n"
+                },
+                {
+                    "date": 1747282181582,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,15 @@\n </template>\r\n \r\n <script setup>\r\n import { ref, onMounted, onBeforeUnmount } from 'vue'\r\n-\r\n+import { useI18n } from 'vue-i18n';\r\n+const {t,  locale } = useI18n();\r\n+const selectedLocale = ref('en');\r\n+const changeLanguage = () => {\r\n+  locale.value = selectedLocale.value;\r\n+};\r\n+// Dynam\r\n const showDropdown = ref(false)\r\n const selectedLanguage = ref('en')\r\n \r\n // Toggle the dropdown\r\n"
+                },
+                {
+                    "date": 1747282191796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n \r\n <script setup>\r\n import { ref, onMounted, onBeforeUnmount } from 'vue'\r\n import { useI18n } from 'vue-i18n';\r\n-const {t,  locale } = useI18n();\r\n+\r\n const selectedLocale = ref('en');\r\n const changeLanguage = () => {\r\n   locale.value = selectedLocale.value;\r\n };\r\n"
+                },
+                {
+                    "date": 1747282198730,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,15 +38,15 @@\n <script setup>\r\n import { ref, onMounted, onBeforeUnmount } from 'vue'\r\n import { useI18n } from 'vue-i18n';\r\n \r\n-const selectedLocale = ref('en');\r\n const changeLanguage = () => {\r\n   locale.value = selectedLocale.value;\r\n };\r\n // Dynam\r\n const showDropdown = ref(false)\r\n const selectedLanguage = ref('en')\r\n+const {t,  locale } = useI18n();\r\n \r\n // Toggle the dropdown\r\n const toggleDropdown = () => {\r\n   showDropdown.value = !showDropdown.value\r\n"
+                },
+                {
+                    "date": 1747282207445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,11 +38,9 @@\n <script setup>\r\n import { ref, onMounted, onBeforeUnmount } from 'vue'\r\n import { useI18n } from 'vue-i18n';\r\n \r\n-const changeLanguage = () => {\r\n-  locale.value = selectedLocale.value;\r\n-};\r\n+\r\n // Dynam\r\n const showDropdown = ref(false)\r\n const selectedLanguage = ref('en')\r\n const {t,  locale } = useI18n();\r\n"
+                },
+                {
+                    "date": 1747282244344,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -43,9 +43,11 @@\n // Dynam\r\n const showDropdown = ref(false)\r\n const selectedLanguage = ref('en')\r\n const {t,  locale } = useI18n();\r\n-\r\n+const changeLanguage = () => {\r\n+  locale.value = selectedLanguage.value;\r\n+};\r\n // Toggle the dropdown\r\n const toggleDropdown = () => {\r\n   showDropdown.value = !showDropdown.value\r\n }\r\n"
+                },
+                {
+                    "date": 1747282297362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n         >\r\n           <label for=\"language\" class=\"block text-gray-700 text-sm mb-1\">Language</label>\r\n           <select\r\n             id=\"language\"\r\n-            v-model=\"selectedLanguage\"\r\n+            v-model=\"selectedLanguage\" @change=\"changeLanguage\"\r\n             class=\"w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring focus:border-blue-300\"\r\n           >\r\n             <option value=\"en\">English</option>\r\n             <option value=\"th\">Thai</option>\r\n"
+                },
+                {
+                    "date": 1747282652690,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -24,9 +24,9 @@\n             id=\"language\"\r\n             v-model=\"selectedLanguage\" @change=\"changeLanguage\"\r\n             class=\"w-full border border-gray-300 rounded px-2 py-1 text-sm focus:outline-none focus:ring focus:border-blue-300\"\r\n           >\r\n-            <option value=\"en\"></option>\r\n+            <option value=\"en\">{}</option>\r\n             <option value=\"th\">Thai</option>\r\n             <option value=\"lo\">Lao</option>\r\n           </select>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747282764646,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n </template>\r\n \r\n <script setup>\r\n import { ref, onMounted, onBeforeUnmount } from 'vue'\r\n-import { useI18n } from '';\r\n+import { useI18n } from '..';\r\n \r\n \r\n // Dynam\r\n const showDropdown = ref(false)\r\n"
                 }
             ],
             "date": 1747042206914,

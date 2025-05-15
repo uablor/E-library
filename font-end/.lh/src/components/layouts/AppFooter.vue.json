@@ -3,11 +3,15 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 0,
+            "activePatchIndex": 1,
             "patches": [
                 {
                     "date": 1747034310224,
                     "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747197176753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <!-- <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n-    </div>\r\n+    </div> -->\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n       <!-- About Section -->\r\n       <div>\r\n"
                 }
             ],
             "date": 1747034310224,

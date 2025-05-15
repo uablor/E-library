@@ -1,0 +1,1 @@
+src/modules/clients/about/entities src/modules/clients/about/interfaces src/modules/clients/about/repositories src/modules/clients/about/routers src/modules/clients/about/schema src/modules/clients/about/services src/modules/clients/about/stores src/modules/clients/about/use-cases src/modules/clients/about/views

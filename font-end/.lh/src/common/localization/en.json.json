@@ -1,0 +1,222 @@
+{
+    "sourceFile": "src/common/localization/en.json",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 51,
+            "patches": [
+                {
+                    "date": 1747282372025,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747282383836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n {\r\n-    \r\n+    \"top\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282392123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,3 @@\n {\r\n-    \"top\"\r\n+    \"topbar\":\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282404180,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,3 +1,6 @@\n {\r\n-    \"topbar\":\r\n+    \"topbar\": {\r\n+        \"title\": \"Topbar\",\r\n+        \"description\": \"The top bar of the application, containing the title and navigation.\"\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282459855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n     \"topbar\": {\r\n-        \"title\": \"Topbar\",\r\n+        \"title\": \"Quest\",\r\n         \"description\": \"The top bar of the application, containing the title and navigation.\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282467645,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n     \"topbar\": {\r\n-        \"title\": \"Quest\",\r\n+        \"title\": \"Quest College\",\r\n         \"description\": \"The top bar of the application, containing the title and navigation.\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282478796,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",\r\n-        \"description\": \"The top bar of the application, containing the title and navigation.\"\r\n+        \r\n+        \"\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282486572,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,6 @@\n {\r\n     \"topbar\": {\r\n-        \"title\": \"Quest College\",\r\n-        \r\n-        \"\"\r\n+        \"title\": \"Quest College\",        \r\n+        \"se\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747282494855,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n-        \"se\"\r\n+        \"settings\": \"Settings\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284299887,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,7 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n-        \"settings\": \"Settings\",\r\n+        \"settings\": \"Settings\"\r\n     }\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284306704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n-    }\r\n-    \r\n+    },\r\n+    \"navbar\"\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284323393,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,6 +2,8 @@\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n     },\r\n-    \"navbar\"\r\n+    \"navbar\":{\r\n+        \"\"\r\n+    }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284331280,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n     },\r\n     \"navbar\":{\r\n-        \"\"\r\n+        \"my\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284337166,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n     },\r\n     \"navbar\":{\r\n-        \"my\"\r\n+        \"myBooks\": \"My Books\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284342455,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,7 @@\n         \"settings\": \"Settings\"\r\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n+        \"\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284355467,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n         \"settings\": \"Settings\"\r\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n-        \"\"\r\n+        \"browse\": \"Browse\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284372899,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,6 +5,7 @@\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n+        \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284379574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n-        \r\n+        \"login\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284394559,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n-        \"login\"\r\n+        \"login\": \"Log\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284401615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,8 @@\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n-        \"login\": \"Log\",\r\n+        \"log\": \"Log\",\r\n+        \"log\": \"Log\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284409027,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,7 +6,8 @@\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n-        \"log\": \"Log\",\r\n+        \"in\": \"in\",\r\n+        \"out\": \"out\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284416568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n-        \"out\": \"out\",\r\n+        \"sign\": \"out\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284421677,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,7 +7,7 @@\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n-        \"sign\": \"out\",\r\n+        \"sign\": \"sign\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284427548,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,6 +8,7 @@\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"sign\",\r\n+        \"up\": \"up\",\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284439709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,8 @@\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n-        \"sign\": \"sign\",\r\n-        \"up\": \"up\",\r\n+        \"sign\": \"ign\",\r\n+        \"up\": \"up\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284921659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,8 +7,9 @@\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n-        \"sign\": \"ign\",\r\n+        \"sign\": \"Sign\",\r\n         \"up\": \"up\"\r\n+        \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284926882,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,8 +8,9 @@\n         \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n-        \"up\": \"up\"\r\n+        \"up\": \"up\",\r\n         \r\n+        \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284932717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n+        \"all\":\"\"\r\n         \r\n-        \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284946907,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,8 +9,8 @@\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n-        \"all\":\"\"\r\n+        \"all\":\"ືທັງໝົດ\",\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284956064,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,7 +10,8 @@\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"ືທັງໝົດ\",\r\n+        \"search\"\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284961489,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"ືທັງໝົດ\",\r\n-        \"search\"\r\n+        \"search\":\"ຄົ້ນຫາ\"\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284971744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n-        \"all\":\"ືທັງໝົດ\",\r\n+        \"all\":\"all\",\r\n         \"search\":\"ຄົ້ນຫາ\"\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747284978042,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,8 +10,8 @@\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n-        \"search\":\"ຄົ້ນຫາ\"\r\n+        \"search\":\"search\"\r\n         \r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285309956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,7 +11,8 @@\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n         \"search\":\"search\"\r\n-        \r\n+        \"login\":\"ເຂົ້າສູ່ລະບົບ\",\r\n+        \"signup\":\"ສະໝັກບັນຊີ\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285317287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n-        \"search\":\"search\"\r\n+        \"search\":\"search\",\r\n         \"login\":\"ເຂົ້າສູ່ລະບົບ\",\r\n         \"signup\":\"ສະໝັກບັນຊີ\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285323885,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n         \"search\":\"search\",\r\n-        \"login\":\"ເຂົ້າສູ່ລະບົບ\",\r\n+        \"login\":\"L\",\r\n         \"signup\":\"ສະໝັກບັນຊີ\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285329961,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n         \"search\":\"search\",\r\n-        \"login\":\"L\",\r\n+        \"login\":\"Login\",\r\n         \"signup\":\"ສະໝັກບັນຊີ\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285335787,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,8 @@\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n         \"search\":\"search\",\r\n-        \"login\":\"Login\",\r\n+        \"login\":\"Log in\",\r\n         \"signup\":\"ສະໝັກບັນຊີ\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285343071,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,7 @@\n         \"up\": \"up\",\r\n         \"all\":\"all\",\r\n         \"search\":\"search\",\r\n         \"login\":\"Log in\",\r\n-        \"signup\":\"ສະໝັກບັນຊີ\"\r\n+        \"signup\":\"Sign up\"\r\n     }\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747285630950,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,8 +5,10 @@\n     },\r\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n+        \"myBook\": \"My Books\",\r\n+        \"browse\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n"
+                },
+                {
+                    "date": 1747285636881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"myBook\": \"My Books\",\r\n-        \"browse\": \"Browse\",\r\n+        \"browsew\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n"
+                },
+                {
+                    "date": 1747285644249,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n     \"navbar\":{\r\n         \"myBooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"myBook\": \"My Books\",\r\n-        \"browsew\": \"Browse\",\r\n+        \"browses\": \"Browse\",\r\n         \"log\": \"Log\",\r\n         \"in\": \"in\",\r\n         \"sign\": \"Sign\",\r\n         \"up\": \"up\",\r\n"
+                },
+                {
+                    "date": 1747285761284,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n     },\r\n     \"navbar\":{\r\n-        \"myBooks\": \"My Books\",\r\n+        \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n         \"myBook\": \"My Books\",\r\n         \"browses\": \"Browse\",\r\n         \"log\": \"Log\",\r\n"
+                },
+                {
+                    "date": 1747286018279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\"\r\n+        \r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286024396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n-        \"settings\": \"Settings\"\r\n-        \r\n+        \"settings\": \"Settings\",\r\n+        \"language\": \"Language\",\r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286085468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,10 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\",\r\n-        \"language\": \"Language\",\r\n+        \"language\": \"Language\"\r\n+        \r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286092224,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\",\r\n         \"language\": \"Language\"\r\n-        \r\n+        \"eng\"\r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286098663,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n {\r\n     \"topbar\": {\r\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\",\r\n-        \"language\": \"Language\"\r\n-        \"eng\"\r\n+        \"language\": \"Language\",\r\n+        \"english\": \"English\",\r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286103791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,9 @@\n         \"title\": \"Quest College\",        \r\n         \"settings\": \"Settings\",\r\n         \"language\": \"Language\",\r\n         \"english\": \"English\",\r\n+        \"lao\": \"Lao\"\r\n     },\r\n     \"navbar\":{\r\n         \"mybooks\": \"My Books\",\r\n         \"browse\": \"Browse\",\r\n"
+                },
+                {
+                    "date": 1747286498347,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,5 +19,6 @@\n         \"search\":\"search\",\r\n         \"login\":\"Log in\",\r\n         \"signup\":\"Sign up\"\r\n     }\r\n+    \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747286503478,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,7 +19,7 @@\n         \"search\":\"search\",\r\n         \"login\":\"Log in\",\r\n         \"signup\":\"Sign up\"\r\n     },\r\n-    \r\n+    \"\"\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747286550705,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -33,7 +33,7 @@\n         \"reviews\": \"Reviews\",\r\n         \"read\": \"Read\",\r\n         \"borrowed\": \"Borrowed\"\r\n     },\r\n-    \"tre\"\r\n+    \"tren\"\r\n \r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1747282372025,
+            "name": "Commit-0",
+            "content": "{\r\n    \r\n}"
+        }
+    ]
+}

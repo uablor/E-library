@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/App.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1747047710751,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747047721461,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n+   router\r\n </template>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1747047726918,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,8 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   router\r\n </template>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1747047733935,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,8 +11,9 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n+   <ro\r\n </template>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1747047744171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,17 +3,19 @@\n  \r\n import AppLayout from \"./components/layouts/AppLayout.vue\";\r\n import DefaultLayout from \"./views/DefaultLayout.vue\";\r\n import { useRoute } from 'vue-router';\r\n+import router from \"./router\";\r\n \r\n // const route = useRoute();\r\n // const token = ref(localStorage.getItem(\"token\") ?? false);\r\n \r\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   <ro\r\n+   <router-view v-slot=\"{ Component }\">\r\n+    </template>\r\n </template>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1747047751720,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,10 +12,10 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   <router-view v-slot=\"{ Component }\">\r\n-    </template>\r\n+   <router-view />\r\n+  \r\n </template>\r\n \r\n <style scoped>\r\n \r\n"
+                },
+                {
+                    "date": 1747142071835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   <router-view />\r\n+   <!-- <router-view /> -->\r\n   \r\n </template>\r\n \r\n <style scoped>\r\n"
+                }
+            ],
+            "date": 1747047710751,
+            "name": "Commit-0",
+            "content": "<script setup lang=\"ts\">\r\nimport { ref } from \"vue\";\r\n \r\nimport AppLayout from \"./components/layouts/AppLayout.vue\";\r\nimport DefaultLayout from \"./views/DefaultLayout.vue\";\r\nimport { useRoute } from 'vue-router';\r\n\r\n// const route = useRoute();\r\n// const token = ref(localStorage.getItem(\"token\") ?? false);\r\n\r\n</script>\r\n\r\n<template>\r\n  <!-- <AppLayout/> -->\r\n</template>\r\n\r\n<style scoped>\r\n\r\n</style>\r\n"
+        }
+    ]
+}

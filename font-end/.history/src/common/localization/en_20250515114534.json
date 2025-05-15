@@ -1,0 +1,9 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings"
+    },
+    "navbar":{
+        "myBooks"
+    }
+}

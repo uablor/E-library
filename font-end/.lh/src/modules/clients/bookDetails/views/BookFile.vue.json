@@ -1,0 +1,26 @@
+{
+    "sourceFile": "src/modules/clients/bookDetails/views/BookFile.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 2,
+            "patches": [
+                {
+                    "date": 1747296233159,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747296421225,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     if (bookContainer.value) {\r\n       const flipBook = new PageFlip(bookContainer.value, {\r\n         width: 500,\r\n         height: 700,\r\n-        size: 'stretch',\r\n+       size: { width: 500, height: 700 }, // or size: 500\r\n         showCover: true,\r\n         useMouseEvents: true\r\n       })\r\n \r\n"
+                },
+                {
+                    "date": 1747296426942,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,9 +27,9 @@\n     if (bookContainer.value) {\r\n       const flipBook = new PageFlip(bookContainer.value, {\r\n         width: 500,\r\n         height: 700,\r\n-       size: { width: 500, height: 700 }, // or size: 500\r\n+        size: 'stretch',\r\n         showCover: true,\r\n         useMouseEvents: true\r\n       })\r\n \r\n"
+                }
+            ],
+            "date": 1747296233159,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div class=\"min-h-screen flex items-center justify-center bg-pink-100\">\r\n    <div ref=\"bookContainer\" class=\"flipbook-container shadow-lg rounded-lg overflow-hidden\"></div>\r\n  </div>\r\n</template>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, onMounted } from 'vue'\r\nimport { PageFlip } from 'page-flip'\r\n\r\nconst bookContainer = ref<HTMLElement | null>(null)\r\n\r\nonMounted(async () => {\r\n  try {\r\n    const res = await fetch('http://localhost:8000/api/book_file/15/')\r\n    const data = await res.json()\r\n    const imageUrls: string[] = data.image_urls\r\n\r\n    const pages: HTMLElement[] = []\r\n    for (const url of imageUrls) {\r\n      const el = document.createElement('div')\r\n      el.className = 'page'\r\n      el.innerHTML = `<img src=\"${'http://localhost:8000' + url}\" class=\"w-full h-full object-contain rounded-md\" />`\r\n      pages.push(el)\r\n    }\r\n\r\n    if (bookContainer.value) {\r\n      const flipBook = new PageFlip(bookContainer.value, {\r\n        width: 500,\r\n        height: 700,\r\n        size: 'stretch',\r\n        showCover: true,\r\n        useMouseEvents: true\r\n      })\r\n\r\n      flipBook.loadFromHTML(pages)\r\n    }\r\n  } catch (err) {\r\n    console.error('Failed to load flipbook:', err)\r\n  }\r\n})\r\n</script>\r\n\r\n<style scoped>\r\n.flipbook-container {\r\n  width: 500px;\r\n  height: 700px;\r\n  background-color: #fff0f5; /* สีชมพูอ่อน */\r\n  border-radius: 12px;\r\n  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);\r\n  transition: transform 0.3s ease;\r\n  transform-origin: center center;\r\n}\r\n</style>\r\n"
+        }
+    ]
+}

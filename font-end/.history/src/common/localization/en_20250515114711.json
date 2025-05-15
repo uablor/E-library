@@ -1,0 +1,14 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings"
+    },
+    "navbar":{
+        "myBooks": "My Books",
+        "browse": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "sign",
+        "up": "up"
+    }
+}

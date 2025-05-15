@@ -1,0 +1,6 @@
+{
+    "topbar": {
+        "title": "Topbar",
+        "description": "The top bar of the application, containing the title and navigation."
+    }
+}

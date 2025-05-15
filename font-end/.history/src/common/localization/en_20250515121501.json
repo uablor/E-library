@@ -1,0 +1,23 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings",
+        "language": "Language",
+        "english": "English",
+        "lao": "Lao",
+    },
+    "navbar":{
+        "mybooks": "My Books",
+        "browse": "Browse",
+        "myBook": "My Books",
+        "browses": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up",
+        "all":"all",
+        "search":"search",
+        "login":"Log in",
+        "signup":"Sign up"
+    }
+}

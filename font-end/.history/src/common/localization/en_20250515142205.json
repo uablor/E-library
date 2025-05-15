@@ -1,0 +1,93 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings",
+        "language": "Language",
+        "english": "English",
+        "lao": "Lao"
+    },
+    "navbar":{
+        "mybooks": "My Books",
+        "browse": "Browse",
+        "myBook": "My Books",
+        "browses": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up",
+        "all":"all",
+        "search":"search",
+        "login":"Log in",
+        "signup":"Sign up"
+    },
+    "bookdetail": {
+        "preview_only": "Preview Only",
+        "search_inside": "Search inside",
+        "already_read": "Already Read",
+        "When_did_you_finish_this_book": "When did you finish this book?",
+        "review": "Review",
+        "notes": "Notes",
+        "share": "Share",
+        "title": "The Idea of Gujarat",
+        "author": "by",
+        "An_edition_of": "An edition of",
+        "description": "The Idea of Gujarat: History, Ethnography and Text (2010)",
+        "published": "Published",
+        "language": "Language",
+        "pages": "Pages",
+        "isbn": "ISBN",
+        "publisher": "Publisher",
+        "publish_date": "Publish_date",
+        "want_to_read": "want to read",
+        "Currently_reading": "Currently reading.",
+        "have_read": "have read.",
+        "rating": "ratings",
+        "bookdetail": "Book Details",
+        "edition_note": "Edition notes",
+        "classifications": "Classifications",
+        "the_Physical_Object": "The Physical Object",
+        "etition_Identifiers": "Edition Identifiers",
+        "work_Identifiers": "Work Identifiers"
+
+    },
+    "trendingbooks": {
+        "title": "Trending Books: Now",
+        "description": "See what readers from the community are adding to their bookshelves.",
+        "now": "Now",
+        "today": "Today",
+        "thisweek": "This Week",
+        "thismonth": "This Month",
+        "thisyear": "This Year",
+        "alltime": "All Time",
+        "read": "Read",
+        "not_in_library": "Not in Library"
+    },
+    "home":{
+        "trendingbooks":"Trending Books",
+        "classic":"Classic books",
+        "readinnow":"Read Now",
+        "not in library":"Not in Library"
+    },
+    "register":{
+        "sign_up": "Sign Up",
+        "description": "Get your free Open Library card and borrow digital books from the nonprofit Internet Archive.",
+        "welcome": "Welcome",
+        "signup_to_our_platform": "Sign up to our platform",
+        "username": "username",
+        "email": "email",
+        "password": "password",
+        "firstname": "first Name",
+        "lastname": "last Name",
+        "phone": "phone number",
+        "department": "department",
+        "confirm_password": "confirm Password",
+        "student_code": "student code",
+        "village": "village",
+        "birthday": "birthday",
+        "checkbox": "ຂ້ອຍຕ້ອງການຮັບຂ່າວ, ປະກາດ, ແລະຊັບພະຍາກອນຈາກ Internet Archive.",
+
+       
+    }
+
+
+}

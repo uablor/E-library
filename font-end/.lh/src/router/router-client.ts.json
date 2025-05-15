@@ -1,0 +1,126 @@
+{
+    "sourceFile": "src/router/router-client.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1747046596306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747046744579,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n+\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046753801,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-\r\n+import\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046761438,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import\r\n+import {H}\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046766517,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import {H}\r\n+import \r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046903058,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import \r\n+import {H}\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046909260,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import {H}\r\n+import {Hom}\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747046919358,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import {Hom}\r\n+import \r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747047049281,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import \r\n+import { HomeRoute } from \"@/modules/clients/home/routers/\";\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/register\",\r\n"
+                },
+                {
+                    "date": 1747047114536,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import { HomeRoute } from \"@/modules/clients/home/routers/\";\r\n+import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n-  {\r\n-    path: \"/client/register\",\r\n-    name: \"/client/register\",\r\n-    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n-    meta: {\r\n-      skipAuthCheck: true,\r\n-    },\r\n+  // {\r\n+  //   path: \"/client/register\",\r\n+  //   name: \"/client/register\",\r\n+  //   component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+  //   meta: {\r\n+  //     skipAuthCheck: true,\r\n+  //   },\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n     // beforeEnter: roleGuard,\r\n"
+                },
+                {
+                    "date": 1747047121445,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,6 +15,6 @@\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n     // beforeEnter: roleGuard,\r\n-  },\r\n+  // },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747047196202,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,16 @@\n-\r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-// import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n+\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n-  // {\r\n-  //   path: \"/client/register\",\r\n-  //   name: \"/client/register\",\r\n-  //   component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n-  //   meta: {\r\n-  //     skipAuthCheck: true,\r\n-  //   },\r\n+  {\r\n+    path: \"/client\",\r\n+    name: \"ClientLayout\",\r\n+    component: () => import(\"@/layouts/ClientLayout.vue\"), // You can replace with your actual layout or component\r\n+    beforeEnter: roleGuard, // Apply guard here if needed\r\n\\ No newline at end of file\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n-    // beforeEnter: roleGuard,\r\n-  // },\r\n-];\n+  }\r\n+];\r\n"
+                },
+                {
+                    "date": 1747047211521,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-\r\n+imp\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n@@ -12,5 +12,5 @@\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n   }\r\n-];\n\\ No newline at end of file\n+];\r\n"
+                },
+                {
+                    "date": 1747047222926,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-imp\r\n+import\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n"
+                },
+                {
+                    "date": 1747047228744,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-import\r\n+import AppL\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n"
+                },
+                {
+                    "date": 1747047242314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-import AppL\r\n+import AppLayout from \"@/components/layouts/AppLayout.vue\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n-    component: () => import(\"@/layouts/ClientLayout.vue\"), // You can replace with your actual layout or component\r\n+    component: () => import(\"../\"), // You can replace with your actual layout or component\r\n     beforeEnter: roleGuard, // Apply guard here if needed\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n"
+                },
+                {
+                    "date": 1747047247650,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n-    component: () => import(\"../\"), // You can replace with your actual layout or component\r\n+    component: () => import(\"../components/layouts/\"), // You can replace with your actual layout or component\r\n     beforeEnter: roleGuard, // Apply guard here if needed\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n"
+                },
+                {
+                    "date": 1747047253568,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-import AppLayout from \"@/components/layouts/AppLayout.vue\";\r\n+\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n-    component: () => import(\"../components/layouts/\"), // You can replace with your actual layout or component\r\n+    component: () => import(\"../components/layouts/AppLayout.vue\"), // You can replace with your actual layout or component\r\n     beforeEnter: roleGuard, // Apply guard here if needed\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n"
+                },
+                {
+                    "date": 1747047319495,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,14 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-\r\n+import AppLayout from \"@/components/layouts/AppLayout.vue\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"ClientLayout\",\r\n-    component: () => import(\"../components/layouts/AppLayout.vue\"), // You can replace with your actual layout or component\r\n+    component: () => import(\"../components/layouts/\"), // You can replace with your actual layout or component\r\n     beforeEnter: roleGuard, // Apply guard here if needed\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n"
+                },
+                {
+                    "date": 1747047327795,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,16 +1,20 @@\n+\r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n-import AppLayout from \"@/components/layouts/AppLayout.vue\";\r\n+// import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n-  {\r\n-    path: \"/client\",\r\n-    name: \"ClientLayout\",\r\n-    component: () => import(\"../components/layouts/\"), // You can replace with your actual layout or component\r\n-    beforeEnter: roleGuard, // Apply guard here if needed\r\n+  // {\r\n+  //   path: \"/client/register\",\r\n+  //   name: \"/client/register\",\r\n+  //   component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+  //   meta: {\r\n+  //     skipAuthCheck: true,\r\n+  //   },\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n-  }\r\n-];\r\n+    // beforeEnter: roleGuard,\r\n+  },\r\n+];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747047335247,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,18 +1,18 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n+import { HomeRoute } from \"@/modules/clients/home/routers/\";\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n-  // {\r\n-  //   path: \"/client/register\",\r\n-  //   name: \"/client/register\",\r\n-  //   component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n-  //   meta: {\r\n-  //     skipAuthCheck: true,\r\n-  //   },\r\n+  {\r\n+    path: \"/client/register\",\r\n+    name: \"/client/register\",\r\n+    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+    meta: {\r\n+      skipAuthCheck: true,\r\n+    },\r\n     children: [\r\n       ...HomeRoute\r\n     ],\r\n     // beforeEnter: roleGuard,\r\n"
+                },
+                {
+                    "date": 1747047543693,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import { HomeRoute } from \"@/modules/clients/home/routers/\";\r\n+import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/register\",\r\n+    path: \"\",\r\n     name: \"/client/register\",\r\n     component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n"
+                },
+                {
+                    "date": 1747047549558,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"\",\r\n+    path: \"/client\",\r\n     name: \"/client/register\",\r\n     component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n"
+                },
+                {
+                    "date": 1747047556024,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n-    name: \"/client/register\",\r\n+    name: \"/client\",\r\n     component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n     },\r\n"
+                },
+                {
+                    "date": 1747047571505,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"/client\",\r\n-    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+    component: () => import(\"@/co\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n     },\r\n     children: [\r\n"
+                },
+                {
+                    "date": 1747047581896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"/client\",\r\n-    component: () => import(\"@/co\"),\r\n+    component: () => import(\"\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n     },\r\n     children: [\r\n"
+                },
+                {
+                    "date": 1747047596014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n     name: \"/client\",\r\n-    component: () => import(\"@\"),\r\n+    component: () => import(\"@/\"),\r\n     meta: {\r\n       skipAuthCheck: true,\r\n     },\r\n     children: [\r\n"
+                },
+                {
+                    "date": 1747223278515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import { HomeRoute } from \"@/modules/clients/home/routers/index\";\r\n import { BookDetailsRoute } from \"@/modules/clients/bookDetails/routers/index\";\r\n-import {Trend}\r\n+import {Trendin}\r\n // import { HomeRoute } from \"@/modules/clients/home/routers\";\r\n export const ClientRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client\",\r\n"
+                }
+            ],
+            "date": 1747046596306,
+            "name": "Commit-0",
+            "content": "\r\nimport { roleGuard } from \"@/common/guards/role.guard\";\r\nimport type { RouteRecordRaw } from \"vue-router\";\r\nimport { GET_ROLES } from \"@/common/utils/const\";\r\n// import { HomeRoute } from \"@/modules/clients/home/routers\";\r\nexport const ClientRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/client/register\",\r\n    name: \"/client/register\",\r\n    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n    meta: {\r\n      skipAuthCheck: true,\r\n    },\r\n    children: [\r\n      ...HomeRoute\r\n    ],\r\n    // beforeEnter: roleGuard,\r\n  },\r\n];"
+        }
+    ]
+}

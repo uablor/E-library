@@ -1,0 +1,162 @@
+{
+    "sourceFile": "src/modules/clients/bookDetails/views/BookDetails.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 36,
+            "patches": [
+                {
+                    "date": 1747196911493,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747196918171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,52 @@\n-src/modules/clients/about/entities src/modules/clients/about/interfaces src/modules/clients/about/repositories src/modules/clients/about/routers src/modules/clients/about/schema src/modules/clients/about/services src/modules/clients/about/stores src/modules/clients/about/use-cases src/modules/clients/about/views\n\\ No newline at end of file\n+<template>\r\n+  <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n+    <!-- Left Section: Book Cover and Info -->\r\n+    <div class=\"w-1/4 flex flex-col items-center gap-4\">\r\n+      <img\r\n+        src=\"@/assets/book-cover.jpg\"\r\n+        alt=\"The Idea of Gujarat\"\r\n+        class=\"w-full object-cover rounded\"\r\n+      />\r\n+\r\n+      <button class=\"bg-green-100 text-green-800 font-medium px-3 py-1 rounded\">📖 Preview Only</button>\r\n+      <button class=\"bg-gray-200 hover:bg-gray-300 text-sm px-4 py-1 rounded\">Search inside</button>\r\n+\r\n+      <div class=\"relative w-full\">\r\n+        <select class=\"w-full mt-2 p-2 bg-white border rounded\">\r\n+          <option>✓ Already Read</option>\r\n+          <option>Want to Read</option>\r\n+          <option>Currently Reading</option>\r\n+        </select>\r\n+      </div>\r\n+\r\n+      <div class=\"text-center text-sm\">\r\n+        <p class=\"text-gray-600\">When did you finish this book?</p>\r\n+        <p class=\"text-blue-600 hover:underline cursor-pointer\">2025 Today <span class=\"text-xs\">Other</span></p>\r\n+      </div>\r\n+\r\n+      <div class=\"text-yellow-500 text-lg\">★★★★★</div>\r\n+\r\n+      <div class=\"flex justify-around w-full text-sm text-gray-600\">\r\n+        <button class=\"hover:underline\">✍️ Review</button>\r\n+        <button class=\"hover:underline\">📝 Notes</button>\r\n+        <button class=\"hover:underline\">🔗 Share</button>\r\n+      </div>\r\n+    </div>\r\n+\r\n+    <!-- Right Section: Book Details -->\r\n+    <div class=\"w-3/4 pl-8\">\r\n+      <p class=\"text-sm italic text-gray-500 mb-2\">\r\n+        An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n+      </p>\r\n+      <h1 class=\"text-xl font-semibold italic\">The Idea of Gujarat</h1>\r\n+    </div>\r\n+  </div>\r\n+</template>\r\n+\r\n+<script setup>\r\n+// No logic needed for static example; dynamic features can be added as needed\r\n+</script>\r\n+\r\n+<style scoped>\r\n+/* Scoped styles if needed */\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1747197079863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4\">\r\n       <img\r\n-        src=\"@/assets/book-cover.jpg\"\r\n+        src=\"../\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n       />\r\n \r\n"
+                },
+                {
+                    "date": 1747197085382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4\">\r\n       <img\r\n-        src=\"../\"\r\n+        src=\"../../../\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n       />\r\n \r\n"
+                },
+                {
+                    "date": 1747197092706,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n   <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4\">\r\n       <img\r\n-        src=\"../../../\"\r\n+        src=\"../../../../assets/images/book1.jpg\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n       />\r\n \r\n"
+                },
+                {
+                    "date": 1747197355043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n-    <div class=\"w-1/4 flex flex-col items-center gap-4\">\r\n+    <div class=\"w-1/4 flex flex-col items-center gap-4 \">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n"
+                },
+                {
+                    "date": 1747197395415,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div class=\"flex border rounded-lg shadow p-4 bg-white w-full max-w-5xl mx-auto\">\r\n+  <div class=\"flex border rounded-lg shadow p-4 - w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4 \">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n"
+                },
+                {
+                    "date": 1747197411828,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n-  <div class=\"flex border rounded-lg shadow p-4 - w-full max-w-5xl mx-auto\">\r\n+  <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n-    <div class=\"w-1/4 flex flex-col items-center gap-4 \">\r\n+    <div class=\"w-1/4 flex flex-col items-center gap-4 bg\">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n"
+                },
+                {
+                    "date": 1747197425710,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n-    <div class=\"w-1/4 flex flex-col items-center gap-4 bg\">\r\n+    <div class=\"w-1/4 flex flex-col items-center gap-4 bg-white \">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n"
+                },
+                {
+                    "date": 1747197465988,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n-    <div class=\"w-1/4 flex flex-col items-center gap-4 bg-white \">\r\n+    <div class=\"w-1/4 flex flex-col items-center gap-4 bg-white p-4 rounded-lg shadow\">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n         alt=\"The Idea of Gujarat\"\r\n         class=\"w-full object-cover rounded\"\r\n@@ -33,9 +33,9 @@\n       </div>\r\n     </div>\r\n \r\n     <!-- Right Section: Book Details -->\r\n-    <div class=\"w-3/4 pl-8\">\r\n+    <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-semibold italic\">The Idea of Gujarat</h1>\r\n"
+                },
+                {
+                    "date": 1747197488246,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto\">\r\n+  <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto ga\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4 bg-white p-4 rounded-lg shadow\">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n"
+                },
+                {
+                    "date": 1747197667888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto ga\">\r\n+  <div class=\"flex border rounded-lg shadow p-4 bg-pink-50 w-full max-w-5xl mx-auto gap-4\">\r\n     <!-- Left Section: Book Cover and Info -->\r\n     <div class=\"w-1/4 flex flex-col items-center gap-4 bg-white p-4 rounded-lg shadow\">\r\n       <img\r\n         src=\"../../../../assets/images/book1.jpg\"\r\n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-semibold italic\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl  italic\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197674140,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl  italic\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-b italic\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197685956,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-b italic\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197733435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold font-s\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197739610,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold font-s\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold font-\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197762343,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold font-\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197767692,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" s>The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197774487,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" s>The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: ;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197790442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: ;\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 50px;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197796228,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 50px;\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 40px;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197803863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 40px;\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197833955,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px;\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197843933,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; \">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747197934435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; \">The Idea of Gujarat</h1>\r\n+     c\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198027444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-     c\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jeju Myeongjo', serif;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198159847,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     <div class=\"w-3/4 pl-8  bg-white p-4 rounded-lg shadow\">\r\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n-      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jeju Myeongjo', serif;\">The Idea of Gujarat</h1>\r\n+      <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198382172,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,8 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n+      \r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198399560,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      \r\n+      <p>by</p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198406635,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by</p>\r\n+      <p>by <span class=\"font-medium\">Amitava Ghosh</span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198435021,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium\">Amitava Ghosh</span></p>\r\n+      <p>by <span class=\"font-medium\">A</span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198442509,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium\">A</span></p>\r\n+      <p>by <span class=\"font-medium\"><a href=\"#\"></a></span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198581788,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium\"><a href=\"#\"></a></span></p>\r\n+      <p>by <span class=\"font-medium \"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198603886,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium \"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n+      <p>by <span class=\"font-medium underline \"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198610153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium underline \"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n+      <p>by <span class=\"font-medium underline text-bu\"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747198618174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,9 +38,9 @@\n       <p class=\"text-sm italic text-gray-500 mb-2\">\r\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n-      <p>by <span class=\"font-medium underline text-blue-950 hover:\"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n+      <p>by <span class=\"font-medium underline text-blue-950 hover:t\"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747199007446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n         An edition of <span class=\"font-medium\">The Idea of Gujarat: History, Ethnography and Text</span> (2010)\r\n       </p>\r\n       <h1 class=\"text-xl font-bold \" style=\"font-size: 35px; font-family: 'Jomolhari', serif;\">The Idea of Gujarat</h1>\r\n       <p>by <span class=\"font-medium underline text-blue-950 hover:text-blue-800\"><a href=\"#\">Amitava Ghosh</a></span></p>\r\n-      <div class=\"flex gap-3 mt-\">\r\n+      <div class=\"flex gap-3 mt-3\">\r\n         <div class=\"text-md\"><span class=\"text-yellow-500\">★★★ ★ </span>3.9 (180 ratings) . .</div>\r\n       <div class=\"text-md\">2,002 Want to read.</div>\r\n       <div class=\"text-md\">228 Currently reading.</div>\r\n       <div class=\"text-md\"> 281 Have read.</div>\r\n"
+                }
+            ],
+            "date": 1747196911493,
+            "name": "Commit-0",
+            "content": "src/modules/clients/about/entities src/modules/clients/about/interfaces src/modules/clients/about/repositories src/modules/clients/about/routers src/modules/clients/about/schema src/modules/clients/about/services src/modules/clients/about/stores src/modules/clients/about/use-cases src/modules/clients/about/views"
+        }
+    ]
+}

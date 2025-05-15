@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 2,
+            "activePatchIndex": 3,
             "patches": [
                 {
                     "date": 1747022346178,
@@ -16,6 +16,10 @@
                 {
                     "date": 1747022359047,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -39,9 +39,9 @@\n           <div class=\"flex-grow border-t border-gray-400\"></div>\r\n         </div>\r\n         <div>\r\n           <h3>Welcome</h3>\r\n-        <h4></h4>\r\n+        <h4>  Sign in to our platform</h4>\r\n         </div>\r\n         <form @submit.prevent=\"handleSubmit\" class=\"space-y-4\">\r\n           <div class=\"space-y-4 overflow-y-auto max-h-[60vh] pr-2\">\r\n             <!-- User Info -->\r\n"
+                },
+                {
+                    "date": 1747295002534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -79,9 +79,9 @@\n               <label class=\"block mb-1 font-semibold text-gray-700\">{{ $t('register.student_code') }}</label>\r\n               <input v-model=\"student.code_student\" type=\"text\" :placeholder=\"$t('register.student_code')+'......'\" class=\"input\" />\r\n             </div>\r\n             <div>\r\n-              <label class=\"block mb-1 font-semibold text-gray-700\">{{ $t('register.village_i') }}</label>\r\n+              <label class=\"block mb-1 font-semibold text-gray-700\">{{ $t('register.village_') }}</label>\r\n               <input v-model=\"student.villege_id\" type=\"text\" placeholder=\"Village ID\" class=\"input\" />\r\n             </div>\r\n \r\n             <div>\r\n"
                 }
             ],
             "date": 1747022346178,

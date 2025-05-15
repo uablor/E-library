@@ -1,0 +1,71 @@
+{
+    "topbar": {
+        "title": "Quest College",        
+        "settings": "Settings",
+        "language": "Language",
+        "english": "English",
+        "lao": "Lao"
+    },
+    "navbar":{
+        "mybooks": "My Books",
+        "browse": "Browse",
+        "myBook": "My Books",
+        "browses": "Browse",
+        "log": "Log",
+        "in": "in",
+        "sign": "Sign",
+        "up": "up",
+        "all":"all",
+        "search":"search",
+        "login":"Log in",
+        "signup":"Sign up"
+    },
+   "bookdetail": {
+  "preview_only": "ສະແດງຕົວຢ່າງເທົ່ານັ້ນ",
+  "search_inside": "ຊອກຫາຂ້າງໃນ",
+  "already_read": "ອ່ານແລ້ວ",
+  "When_did_you_finish_this_book": "ເຈົ້າອ່ານປື້ມນີ້ຈົບເມື່ອໃດ?",
+  "review": "ທົບທວນ",
+  "notes": "ໝາຍເຫດ",
+  "share": "ແບ່ງປັນ",
+  "title": "ຄວາມຄິດກ່ຽວກັບຄຣະລັດຄູຈາຣາດ",
+  "author": "ອາມິຕະວາ ກໍໂຊ",
+  "description": "ສຳນວນໜຶ່ງຂອງ The Idea of Gujarat: History, Ethnography and Text (2010)",
+  "published": "ຕີພິມ",
+  "language": "ພາສາ",
+  "pages": "ໜ້າ",
+  "isbn": "ISBN",
+  "publisher": "ສະນັກພິມ",
+  "publish_date": "ວັນທີຕີພິມ",
+  "want_to_read": "ຢາກອ່ານ",
+  "Currently_reading": "ກຳລັງອ່ານ",
+  "have_read": "ອ່ານແລ້ວ",
+  "rating": "ຄະແນນປະເມີນ",
+  "bookdetail": "ລາຍລະອຽດປື້ມ",
+  "edition_note": "ຫມາຍເຫດສຳນວນ",
+  "classifications": "ການແບ່ງປະເພດ",
+  "the_Physical_Object": "ວັດຖຸທາງກາຍ",
+  "etition_Identifiers": "ລະຫັດສຳນວນ",
+  "work_Identifiers": "ລະຫັດຜົນງານ"
+}
+    "trendingbooks": {
+        "title": "Trending Books: Now",
+        "description": "See what readers from the community are adding to their bookshelves.",
+        "now": "Now",
+        "today": "Today",
+        "thisweek": "This Week",
+        "thismonth": "This Month",
+        "thisyear": "This Year",
+        "alltime": "All Time",
+        "read": "Read",
+        "not_in_library": "Not in Library"
+    },
+    "home":{
+        "trendingbooks":"Trending Books",
+        "classic":"Classic books",
+        "readinnow":"Read Now",
+        "not in library":"Not in Library"
+    }
+
+
+}

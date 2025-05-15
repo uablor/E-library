@@ -1,0 +1,10 @@
+import type { RouteRecordRaw } from "vue-router";
+
+export const authRoute: RouteRecordRaw[] = [
+  {
+    path: "/client/home",
+    name: "cllient-home",
+    component: () => import("../views/HomePage.vue"),
+    meta: { label: "cl" },
+  },
+];

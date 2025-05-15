@@ -1,0 +1,62 @@
+{
+    "sourceFile": "src/modules/clients/bookDetails/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 11,
+            "patches": [
+                {
+                    "date": 1747196943233,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747196950283,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/home\",\r\n+    path: \"/client/bookD\",\r\n     name: \"client-home\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n"
+                },
+                {
+                    "date": 1747196957444,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/bookD\",\r\n-    name: \"client-home\",\r\n+    path: \"/client/bookDetails\",\r\n+    name: \"client-bookDetails\",\r\n     component: () => import(\"../views/HomePage.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747196965268,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n-    component: () => import(\"../views/HomePage.vue\"),\r\n+    component: () => import(\"../views/\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747196971079,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,8 +3,8 @@\n export const HomeRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n-    component: () => import(\"../views/\"),\r\n+    component: () => import(\"../views/BookDetails.vue\"),\r\n     meta: { label: \"cllient.home\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747196977817,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,7 +4,7 @@\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n     component: () => import(\"../views/BookDetails.vue\"),\r\n-    meta: { label: \"cllient.home\" },\r\n+    meta: { label: \"cllient.book\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747196988810,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,10 +1,10 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const HomeRoute: RouteRecordRaw[] = [\r\n+export const BookDetailsRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n     component: () => import(\"../views/BookDetails.vue\"),\r\n-    meta: { label: \"cllient.book\" },\r\n+    meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747297281615,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,4 +7,12 @@\n     component: () => import(\"../views/BookDetails.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\r\n+export const BookDetailsRoute: RouteRecordRaw[] = [\r\n+  {\r\n+    path: \"/client/bookDetails\",\r\n+    name: \"client-bookDetails\",\r\n+    component: () => import(\"../views/BookDetails.vue\"),\r\n+    meta: { label: \"cllient.bookDetails\" },\r\n+  },\r\n+];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747297290367,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n     component: () => import(\"../views/BookDetails.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\r\n-export const BookDetailsRoute: RouteRecordRaw[] = [\r\n+export const BooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n     component: () => import(\"../views/BookDetails.vue\"),\r\n"
+                },
+                {
+                    "date": 1747297296781,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,12 +7,12 @@\n     component: () => import(\"../views/BookDetails.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\r\n-export const BooksRoute: RouteRecordRaw[] = [\r\n+export const BookFilesRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/client/bookDetails\",\r\n     name: \"client-bookDetails\",\r\n-    component: () => import(\"../views/BookDetails.vue\"),\r\n+    component: () => import(\"../views/.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747297315304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   },\r\n ];\r\n export const BookFilesRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/bookDetails\",\r\n+    path: \"/client/\",\r\n     name: \"client-bookDetails\",\r\n-    component: () => import(\"../views/.vue\"),\r\n+    component: () => import(\"../views/BookFile.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747297322330,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   },\r\n ];\r\n export const BookFilesRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/\",\r\n-    name: \"client-bookDetails\",\r\n+    path: \"/client/bookFiles\",\r\n+    name: \"client-bookFiles\",\r\n     component: () => import(\"../views/BookFile.vue\"),\r\n-    meta: { label: \"cllient.bookDetails\" },\r\n+    meta: { label: \"cllient.\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1747196943233,
+            "name": "Commit-0",
+            "content": "import type { RouteRecordRaw } from \"vue-router\";\r\n\r\nexport const HomeRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/client/home\",\r\n    name: \"client-home\",\r\n    component: () => import(\"../views/HomePage.vue\"),\r\n    meta: { label: \"cllient.home\" },\r\n  },\r\n];\r\n"
+        }
+    ]
+}
