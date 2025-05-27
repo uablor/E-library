@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/modules/admin/book/entities/book.entity.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1748022658250,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748022786672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,18 +9,4 @@\n   category?: string\r\n   type?: string\r\n }\r\n \r\n-export interface BookFile {\r\n-  id: number\r\n-  file_url: string\r\n-  file_type: string\r\n-  upload_timestamp: string\r\n-  deleted_at: Date | null\r\n-  updated_at: string\r\n-  created_at: string\r\n-  book_id: {\r\n-  type: mongoose.Schema.Types.ObjectId,\r\n-  ref: 'Book',\r\n-  required: true,\r\n-},\r\n-}\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1748022658250,
+            "name": "Commit-0",
+            "content": "export interface Book {\r\n  id: number\r\n  image?: string\r\n  title?: string\r\n  author?: string\r\n  isbn?: string\r\n  publisher?: string\r\n  publish_date?: string\r\n  category?: string\r\n  type?: string\r\n}\r\n\r\nexport interface BookFile {\r\n  id: number\r\n  file_url: string\r\n  file_type: string\r\n  upload_timestamp: string\r\n  deleted_at: Date | null\r\n  updated_at: string\r\n  created_at: string\r\n  book_id: {\r\n  type: mongoose.Schema.Types.ObjectId,\r\n  ref: 'Book',\r\n  required: true,\r\n},\r\n}"
+        }
+    ]
+}

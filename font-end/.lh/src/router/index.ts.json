@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/router/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1747318903902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1747318903902,
+            "name": "Commit-0",
+            "content": "\r\nimport { createRouter, createWebHistory } from \"vue-router\";\r\nimport { authGuard } from \"@/common/guards/auth.guard\";\r\nimport { GET_ROLES } from \"@/common/utils/const\";\r\nimport { AdminRoute } from \"./router-admin\";\r\nimport { ClientRoute } from \"./router-client\";\r\nconst router = createRouter({\r\n  history: createWebHistory(import.meta.env.BASE_URL),\r\n  routes: [\r\n    {\r\n      path: \"/admin\",\r\n      name:\"admin\",\r\n      // component: () => import(\"../components/layouts/AppLayout.vue\"),\r\n      children: [\r\n        ...AdminRoute,\r\n      ],\r\n      meta: {\r\n        // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n      },\r\n    },\r\n    // ...authRoute,\r\n    ...ClientRoute,\r\n    \r\n  ],\r\n});\r\n\r\n// authGuard(router);\r\n\r\nexport default router;"
+        }
+    ]
+}

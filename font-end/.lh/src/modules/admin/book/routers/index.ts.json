@@ -1,0 +1,282 @@
+{
+    "sourceFile": "src/modules/admin/book/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 66,
+            "patches": [
+                {
+                    "date": 1747321994534,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747322000711,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminUserRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/user\",\r\n     name: \"admin.user\",\r\n-    component: () => import(\"../views/UserMangement.vue\"),\r\n+    component: () => import(\"../views/.vue\"),\r\n     meta: {\r\n       label: \"sidebar.user\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747322016287,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,13 +1,13 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const adminUserRoute: RouteRecordRaw[] = [\r\n+export const adminBookRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/user\",\r\n     name: \"admin.user\",\r\n-    component: () => import(\"../views/.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.user\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747322027405,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n-export const adminBookRoute: RouteRecordRaw[] = [\r\n+export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/user\",\r\n+    path: \"/admin/book\",\r\n     name: \"admin.user\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.user\",\r\n"
+                },
+                {
+                    "date": 1747322033304,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,12 +4,12 @@\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book\",\r\n-    name: \"admin.user\",\r\n+    name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.user\",\r\n+      label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n   }\r\n"
+                },
+                {
+                    "date": 1747395472314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,6 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n-  }\r\n+  },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747395479499,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,6 +11,8 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n-  },\r\n+  },{\r\n+    \r\n+  }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747395488891,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,7 +12,13 @@\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n   },{\r\n-    \r\n+      path: \"/admin/book\",\r\n+    name: \"admin.book\",\r\n+    component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.book\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747395513416,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/book\",\r\n+    path: \"/admin/book_\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747395520571,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/book_\",\r\n+    path: \"/admin/book_type_category\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747395526404,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,9 +4,9 @@\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n-    name: \"admin.book\",\r\n+    name: \"admin.book_type_category\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n"
+                },
+                {
+                    "date": 1747395543231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,16 +7,16 @@\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.book\",\r\n+      label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n+    component: () => import(\"../views/booktype_category.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747395604842,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category.vue\"),\r\n+    component: () => import(\"../\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747395623075,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../\"),\r\n+    component: () => import(\"../v\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747395642174,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../v\"),\r\n+    component: () => import(\"../views\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747395660306,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views\"),\r\n+    component: () => import(\"../views/booktype_category\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747395676035,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,9 @@\n     // beforeEnter: roleGuard,\r\n   },{\r\n       path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category\"),\r\n+    component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747409598827,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,6 @@\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n-  }\r\n+  },\r\n ];\r\n"
+                },
+                {
+                    "date": 1747409611762,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -19,6 +19,14 @@\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n-  },\r\n+  },{\r\n+      path: \"/admin/book_\",\r\n+    name: \"admin.book\",\r\n+    component: () => import(\"../views/booktype_category/Books.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.book\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n+  }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747409617741,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_\",\r\n+      path: \"/admin/book_sco\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409624186,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_sco\",\r\n+      path: \"/admin/book_se\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409633729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_se\",\r\n+      path: \"/admin/book_sc\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409729970,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_sc\",\r\n+      path: \"/admin/book_score_\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409745153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_score_\",\r\n+      path: \"/admin/book_score_and\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409750526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_score_and\",\r\n+      path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747409759515,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n       path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category/Books.vue\"),\r\n+    component: () => import(\"../views/booktype_category/.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747409769790,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n       path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category/.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile.vue.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747416529412,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n   },{\r\n-      path: \"/admin/book\",\r\n+      path: \"/admin/books\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n       path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile.vue.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747416586417,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,14 +11,13 @@\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n-  },{\r\n-      path: \"/admin/books\",\r\n-    name: \"admin.book\",\r\n+  },{path: \"/admin/books\",\r\n+    name: \"admin.books\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.book\",\r\n+      label: \"sidebar.books\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n       path: \"/admin/book_score_and_file\",\r\n"
+                },
+                {
+                    "date": 1747416593242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,9 +11,10 @@\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n-  },{path: \"/admin/books\",\r\n+  },\r\n+  {path: \"/admin/books\",\r\n     name: \"admin.books\",\r\n     component: () => import(\"../views/booktype_category/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.books\",\r\n"
+                },
+                {
+                    "date": 1747416609230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n       path: \"/admin/book_score_and_file\",\r\n-    name: \"admin.book\",\r\n+    name: \"admin.book_score_and_file\",\r\n     component: () => import(\"../views/booktype_category/BookScore_BookFile.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n"
+                },
+                {
+                    "date": 1747416627307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,13 +20,13 @@\n       label: \"sidebar.books\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-      path: \"/admin/book_score_and_file\",\r\n+    path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n     component: () => import(\"../views/booktype_category/BookScore_BookFile.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.book\",\r\n+      label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747417433018,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,9 @@\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n     component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n-    meta: {\r\n+    meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n"
+                },
+                {
+                    "date": 1747421985991,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/BookScore_BookFile.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747422846532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/BookScore_BookFile.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/BookScore_BookFile_form_Manage.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747422995492,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/BookScore_BookFile_form_Manage.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423001547,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/table.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423007133,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/table.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/table_for.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423015709,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/table_for.vue\"),\r\n+    component: () => import(\"../views/booktype_category/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423089230,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,18 +5,18 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/booktype_category/BookType_Category.vue\"),\r\n+    component: () => import(\"../views/BookType_Category.vue\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n   },\r\n   {path: \"/admin/books\",\r\n     name: \"admin.books\",\r\n-    component: () => import(\"../views/booktype_category/Books.vue\"),\r\n+    component: () => import(\"../views/Books.vue\"),\r\n     meta: {\r\n       label: \"sidebar.books\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423115014,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category.vue\"),\r\n+    component: () => import(\"../views/\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423148641,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/\"),\r\n+    component: () => import(\"../views/B\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423154535,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/B\"),\r\n+    component: () => import(\"../views/BookType\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423160994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType\"),\r\n+    component: () => import(\"../views/BookType_Category\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747423179761,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category\"),\r\n+    component: () => import(\"../views/BookType_Category.vue\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n@@ -22,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n-    component: () => import(\"../views/booktype_category/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n+    component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747425623897,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category.vue\"),\r\n+    component: () => import(\"../views/BookType_Category\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747425655200,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category\"),\r\n+    component: () => import(\"../views/BookType_Category/table_for_type_category.vue\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747425661996,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,9 +5,9 @@\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/book_type_category\",\r\n     name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category/table_for_type_category.vue\"),\r\n+    component: () => import(\"../views/BookType_Category/table_for_type_and_category.vue\"),\r\n     meta:{\r\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747748427902,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,14 @@\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n+  },{\r\n+    path: \"/admin/book_score_and_file\",\r\n+    name: \"admin.book_score_and_file\",\r\n+    component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.book_score_and_file\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747748436880,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,10 +28,10 @@\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/book_score_and_file\",\r\n-    name: \"admin.book_score_and_file\",\r\n+    path: \"/admin/book\",\r\n+    name: \"admin.book\",\r\n     component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n"
+                },
+                {
+                    "date": 1747748458276,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,11 +30,11 @@\n     },\r\n   },{\r\n     path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n+    component: () => import(\"../views/.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.book_score_and_file\",\r\n+      label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747751435066,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -11,16 +11,8 @@\n       label: \"sidebar.book_type_category\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n     // beforeEnter: roleGuard,\r\n-  },\r\n-  {path: \"/admin/books\",\r\n-    name: \"admin.books\",\r\n-    component: () => import(\"../views/Books.vue\"),\r\n-    meta: {\r\n-      label: \"sidebar.books\",\r\n-      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n-    },\r\n   },{\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n     component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n@@ -30,9 +22,9 @@\n     },\r\n   },{\r\n     path: \"/admin/book\",\r\n     name: \"admin.book\",\r\n-    component: () => import(\"../views/.vue\"),\r\n+    component: () => import(\"../views/Book.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747996046448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -27,6 +27,14 @@\n     meta: {\r\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n+  },{\r\n+    path: \"/admin/book\",\r\n+    name: \"admin.book\",\r\n+    component: () => import(\"../views/Book.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.book\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747996053279,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,9 +28,9 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/book\",\r\n+    path: \"/admin/bookCate\",\r\n     name: \"admin.book\",\r\n     component: () => import(\"../views/Book.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book\",\r\n"
+                },
+                {
+                    "date": 1747996060115,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -28,13 +28,13 @@\n       label: \"sidebar.book\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/bookCate\",\r\n-    name: \"admin.book\",\r\n-    component: () => import(\"../views/Book.vue\"),\r\n+    path: \"/admin/bookCategory\",\r\n+    name: \"admin.bookCategory\",\r\n+    component: () => import(\"../views/bookCategory.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.book\",\r\n+      label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1747996076298,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     },\r\n   },{\r\n     path: \"/admin/bookCategory\",\r\n     name: \"admin.bookCategory\",\r\n-    component: () => import(\"../views/bookCategory.vue\"),\r\n+    component: () => import(\"../\"),\r\n     meta: {\r\n       label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1747996087666,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -30,9 +30,9 @@\n     },\r\n   },{\r\n     path: \"/admin/bookCategory\",\r\n     name: \"admin.bookCategory\",\r\n-    component: () => import(\"../\"),\r\n+    component: () => import(\"../views/BookCategory.vue\"),\r\n     meta: {\r\n       label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1748014765577,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,6 +35,14 @@\n     meta: {\r\n       label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n+  },{\r\n+    path: \"/admin/bookCategory\",\r\n+    name: \"admin.bookCategory\",\r\n+    component: () => import(\"../views/BookCategory.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.bookCategory\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1748014770777,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -36,9 +36,9 @@\n       label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/bookCategory\",\r\n+    path: \"/admin/booktype\",\r\n     name: \"admin.bookCategory\",\r\n     component: () => import(\"../views/BookCategory.vue\"),\r\n     meta: {\r\n       label: \"sidebar.bookCategory\",\r\n"
+                },
+                {
+                    "date": 1748014777326,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n     path: \"/admin/booktype\",\r\n-    name: \"admin.bookCategory\",\r\n+    name: \"admin.booktype\",\r\n     component: () => import(\"../views/BookCategory.vue\"),\r\n     meta: {\r\n       label: \"sidebar.bookCategory\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n"
+                },
+                {
+                    "date": 1748014794614,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -38,11 +38,11 @@\n     },\r\n   },{\r\n     path: \"/admin/booktype\",\r\n     name: \"admin.booktype\",\r\n-    component: () => import(\"../views/BookCategory.vue\"),\r\n+    component: () => import(\"../views/BookType.vue\"),\r\n     meta: {\r\n-      label: \"sidebar.bookCategory\",\r\n+      label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1748019012231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,18 +2,9 @@\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n-  {\r\n-    path: \"/admin/book_type_category\",\r\n-    name: \"admin.book_type_category\",\r\n-    component: () => import(\"../views/BookType_Category/table_for_type_and_category.vue\"),\r\n-    meta:{\r\n-      label: \"sidebar.book_type_category\",\r\n-      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n-    },\r\n-    // beforeEnter: roleGuard,\r\n-  },{\r\n+ {\r\n     path: \"/admin/book_score_and_file\",\r\n     name: \"admin.book_score_and_file\",\r\n     component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n     meta: {\r\n"
+                },
+                {
+                    "date": 1748021908636,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,6 +34,14 @@\n     meta: {\r\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n+  },{\r\n+    path: \"/admin/booktype\",\r\n+    name: \"admin.booktype\",\r\n+    component: () => import(\"../views/BookType.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.booktype\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n+    },\r\n   }\r\n ];\r\n"
+                },
+                {
+                    "date": 1748021915951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -37,9 +37,9 @@\n     },\r\n   },{\r\n     path: \"/admin/booktype\",\r\n     name: \"admin.booktype\",\r\n-    component: () => import(\"../views/BookType.vue\"),\r\n+    component: () => import(\"../views/Book.vue\"),\r\n     meta: {\r\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1748021922574,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,11 +35,11 @@\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/booktype\",\r\n+    path: \"/admin/bookf,\r\n     name: \"admin.booktype\",\r\n-    component: () => import(\"../views/Book.vue\"),\r\n+    component: () => import(\"../views/BookFile.vue\"),\r\n     meta: {\r\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n"
+                },
+                {
+                    "date": 1748021928874,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -35,10 +35,10 @@\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n     },\r\n   },{\r\n-    path: \"/admin/bookf,\r\n-    name: \"admin.booktype\",\r\n+    path: \"/admin/bookfile\",\r\n+    name: \"admin.bookfile\",\r\n     component: () => import(\"../views/BookFile.vue\"),\r\n     meta: {\r\n       label: \"sidebar.booktype\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n"
+                },
+                {
+                    "date": 1748064723835,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n \r\n export const adminBooksRoute: RouteRecordRaw[] = [\r\n  {\r\n-    path: \"/admin/book_scor\",\r\n+    path: \"/admin/book_score\",\r\n     name: \"admin.book_score_and_file\",\r\n     component: () => import(\"../views/BookScore_BookFile/table_for_Score_and_file.vue\"),\r\n     meta: {\r\n       label: \"sidebar.book_score_and_file\",\r\n"
+                }
+            ],
+            "date": 1747321994534,
+            "name": "Commit-0",
+            "content": "import { roleGuard } from \"@/common/guards/role.guard\";\r\nimport { GET_ROLES } from \"@/common/utils/const\";\r\nimport type { RouteRecordRaw } from \"vue-router\";\r\n\r\nexport const adminUserRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/user\",\r\n    name: \"admin.user\",\r\n    component: () => import(\"../views/UserMangement.vue\"),\r\n    meta: {\r\n      label: \"sidebar.user\",\r\n      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n    },\r\n    // beforeEnter: roleGuard,\r\n  }\r\n];\r\n"
+        }
+    ]
+}

@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/modules/admin/book/entities/bookType.entity.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1748015775382,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748016308123,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n-  name: string\r\n+  name?: string\r\n   description: string\r\n   created_at: string\r\n   updated_at: string\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016314357,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n-  description: string\r\n-  created_at: string\r\n+  description?: string\r\n+  created_at: date\r\n   updated_at: string\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016345839,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at: date\r\n-  updated_at: string\r\n+  created_at: ate\r\n+  updated_at: date\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016350905,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at: ate\r\n-  updated_at: date\r\n+  created_at: Date\r\n+  updated_at: Date\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016358350,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at: Date\r\n+  created_at?: Date\r\n   updated_at: Date\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016451082,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at?: Date\r\n-  updated_at: Date\r\n+  created_at?: string\r\n+  upstringd_at?: Date\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016456448,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at?: string\r\n-  upstringd_at?: Date\r\n+  created_at?: Date\r\n+  updated_at?: S\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748016463179,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookType {\r\n   id: number\r\n   name?: string\r\n   description?: string\r\n-  created_at?: Date\r\n-  updated_at?: S\r\n+  created_at?: s\r\n+  updated_at?: string\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1748015775382,
+            "name": "Commit-0",
+            "content": "export interface BookType {\r\n  id: number\r\n  name: string\r\n  description: string\r\n  created_at: string\r\n  updated_at: string\r\n}"
+        }
+    ]
+}

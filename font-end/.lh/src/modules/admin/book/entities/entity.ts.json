@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/modules/admin/book/entities/entity.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1747992603317,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747992608658,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-interface Book {\r\n+export interface Book {\r\n   id: number\r\n   image: string\r\n   title: string\r\n   author: string\r\n"
+                },
+                {
+                    "date": 1747992619090,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface Book {\r\n   id: number\r\n-  image: string\r\n+  image?: string\r\n   title: string\r\n   author: string\r\n   isbn: string\r\n   publisher: string\r\n"
+                },
+                {
+                    "date": 1747992625033,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n export interface Book {\r\n   id: number\r\n   image?: string\r\n-  title: string\r\n+  title?: string\r\n   author: string\r\n   isbn: string\r\n   publisher: string\r\n   publish_date: string\r\n"
+                },
+                {
+                    "date": 1747992631651,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,11 +1,11 @@\n export interface Book {\r\n   id: number\r\n   image?: string\r\n   title?: string\r\n-  author: string\r\n-  isbn: string\r\n-  publisher: string\r\n+  author?: string\r\n+  isbn?: string\r\n+  publisher?: string\r\n   publish_date: string\r\n   category: string\r\n   type: string\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747992638368,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,8 +4,8 @@\n   title?: string\r\n   author?: string\r\n   isbn?: string\r\n   publisher?: string\r\n-  publish_date: string\r\n-  category: string\r\n-  type: string\r\n+  publish_date?: string\r\n+  category?: string\r\n+  type?: string\r\n }\n\\ No newline at end of file\n"
+                }
+            ],
+            "date": 1747992603317,
+            "name": "Commit-0",
+            "content": "interface Book {\r\n  id: number\r\n  image: string\r\n  title: string\r\n  author: string\r\n  isbn: string\r\n  publisher: string\r\n  publish_date: string\r\n  category: string\r\n  type: string\r\n}"
+        }
+    ]
+}

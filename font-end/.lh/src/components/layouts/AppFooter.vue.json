@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 1,
+            "activePatchIndex": 30,
             "patches": [
                 {
                     "date": 1747034310224,
@@ -12,6 +12,122 @@
                 {
                     "date": 1747197176753,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <!-- <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n-    </div>\r\n+    </div> -->\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n       <!-- About Section -->\r\n       <div>\r\n"
+                },
+                {
+                    "date": 1747306188913,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     <div class=\"flex justify-between\">\r\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Catalog</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\"></a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306208442,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     <div class=\"flex justify-between\">\r\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\"></a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">T</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306216078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     <div class=\"flex justify-between\">\r\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">T</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending </a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306470503,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -20,9 +20,9 @@\n     <div class=\"flex justify-between\">\r\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending </a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending type</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306480655,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,8 +21,9 @@\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending type</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library type</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306494089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending type</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library type</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library explorer</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306499324,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending type</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library explorer</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library exp</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306504981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -21,9 +21,9 @@\n \r\n       <ul class=\"space-y-2\">\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Home</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Trending type</a></li>\r\n-        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library exp</a></li>\r\n+        <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Library explorer</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">My Account</a></li>\r\n         <li><a href=\"#\" class=\"text-gray-300 hover:text-white transition\">Contact Us</a></li>\r\n       </ul>\r\n       <DotLottieVue class=\"md:hidden sm:w-100 -mt-10\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n"
+                },
+                {
+                    "date": 1747306561353,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n   <!-- Contact Information -->\r\n   <div class=\"xl:ml-20 lg:ml-15\">\r\n     <h2 class=\"text-xl font-semibold mb-4\">Contact Us</h2>\r\n-    <p class=\"text-sm text-gray-300\">123 Library Lane<br>Vientiane, Laos</p>\r\n+    <p class=\"text-sm text-gray-300\">123 Library Lane<br>Vientiane capital, Laos</p>\r\n     <p class=\"text-sm text-gray-300 mt-2\">Phone: (123) 456-7890</p>\r\n     <p class=\"text-sm text-gray-300\">Email: info@librarysystem.com</p>\r\n   </div>\r\n </div>\r\n"
+                },
+                {
+                    "date": 1747306568686,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n   <!-- Contact Information -->\r\n   <div class=\"xl:ml-20 lg:ml-15\">\r\n     <h2 class=\"text-xl font-semibold mb-4\">Contact Us</h2>\r\n-    <p class=\"text-sm text-gray-300\">123 Library Lane<br>Vientiane capital, Laos</p>\r\n+    <p class=\"text-sm text-gray-300\">Library <br>Vientiane capital, Laos</p>\r\n     <p class=\"text-sm text-gray-300 mt-2\">Phone: (123) 456-7890</p>\r\n     <p class=\"text-sm text-gray-300\">Email: info@librarysystem.com</p>\r\n   </div>\r\n </div>\r\n"
+                },
+                {
+                    "date": 1747306573863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n   <!-- Contact Information -->\r\n   <div class=\"xl:ml-20 lg:ml-15\">\r\n     <h2 class=\"text-xl font-semibold mb-4\">Contact Us</h2>\r\n-    <p class=\"text-sm text-gray-300\">Library <br>Vientiane capital, Laos</p>\r\n+    <p class=\"text-sm text-gray-300\">E-Library  <br>Vientiane capital, Laos</p>\r\n     <p class=\"text-sm text-gray-300 mt-2\">Phone: (123) 456-7890</p>\r\n     <p class=\"text-sm text-gray-300\">Email: info@librarysystem.com</p>\r\n   </div>\r\n </div>\r\n"
+                },
+                {
+                    "date": 1747306579314,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n \r\n   <!-- Contact Information -->\r\n   <div class=\"xl:ml-20 lg:ml-15\">\r\n     <h2 class=\"text-xl font-semibold mb-4\">Contact Us</h2>\r\n-    <p class=\"text-sm text-gray-300\">E-Library  <br>Vientiane capital, Laos</p>\r\n+    <p class=\"text-sm text-gray-300\">E-Library System <br>Vientiane capital, Laos</p>\r\n     <p class=\"text-sm text-gray-300 mt-2\">Phone: (123) 456-7890</p>\r\n     <p class=\"text-sm text-gray-300\">Email: info@librarysystem.com</p>\r\n   </div>\r\n </div>\r\n"
+                },
+                {
+                    "date": 1747462305057,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <!-- <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n-    </div> -->\r\n+    </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n       <!-- About Section -->\r\n       <div>\r\n@@ -32,9 +32,9 @@\n \r\n   <!-- Contact Information -->\r\n   <div class=\"xl:ml-20 lg:ml-15\">\r\n     <h2 class=\"text-xl font-semibold mb-4\">Contact Us</h2>\r\n-    <p class=\"text-sm text-gray-300\">E-Library System <br>Vientiane capital, Laos</p>\r\n+    <p class=\"text-sm text-gray-300\">E-Library Systems <br>Vientiane capital, Laos</p>\r\n     <p class=\"text-sm text-gray-300 mt-2\">Phone: (123) 456-7890</p>\r\n     <p class=\"text-sm text-gray-300\">Email: info@librarysystem.com</p>\r\n   </div>\r\n </div>\r\n"
+                },
+                {
+                    "date": 1747462442862,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,8 +67,9 @@\n \r\n </template>\r\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n+import {use}\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462461446,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n \r\n </template>\r\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n-import {use}\r\n+import {use} from 'vue-router'\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462472508,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n \r\n </template>\r\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n-import {use} from 'vue-router'\r\n+import {useR} from 'vue-router'\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462477633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -67,9 +67,9 @@\n \r\n </template>\r\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n-import {useR} from 'vue-router'\r\n+import {useRoute} from 'vue-router'\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462491044,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,7 +69,9 @@\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n import {useRoute} from 'vue-router'\r\n \r\n+const \r\n \r\n+\r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462497712,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -69,9 +69,9 @@\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n import {useRoute} from 'vue-router'\r\n \r\n-const \r\n+const route = useRoute()\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462514152,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <div  class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n@@ -69,9 +69,9 @@\n <script setup lang=\"ts\">\r\n import { DotLottieVue } from '@lottiefiles/dotlottie-vue'\r\n import {useRoute} from 'vue-router'\r\n \r\n-const route = useRoute()\r\n+const route = useRoute();\r\n \r\n \r\n </script>\r\n <style scoped></style>\r\n"
+                },
+                {
+                    "date": 1747462521890,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div  class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <div v-if class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n"
+                },
+                {
+                    "date": 1747462527468,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,8 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n+    <div v-if\r\n+     class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n     <div class=\"grid grid-cols-1 md:grid-cols-3 gap-10 ml-20\">\r\n"
+                },
+                {
+                    "date": 1747462536873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if\r\n+    <div v-if=\"path\"\r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n"
+                },
+                {
+                    "date": 1747462558951,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,9 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if=\"path\"\r\n+    <div v-if=\"route.path !== '/home'\" \r\n+    class=\"hidden md:block\" \r\n+    style=\"margin-top: -200px; margin-left: 10rem;\"\r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n"
+                },
+                {
+                    "date": 1747462576903,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if=\"route.path !== '/home'\" \r\n-    class=\"hidden md:block\" \r\n+    <div v-if=\"route.path == '/home'\" \r\n+    class=\"\" \r\n     style=\"margin-top: -200px; margin-left: 10rem;\"\r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1747462584153,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n     <div v-if=\"route.path == '/home'\" \r\n-    class=\"\" \r\n+    \r\n     style=\"margin-top: -200px; margin-left: 10rem;\"\r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1747462595973,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n     <div v-if=\"route.path == '/home'\" \r\n-    \r\n-    style=\"margin-top: -200px; margin-left: 10rem;\"\r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n"
+                },
+                {
+                    "date": 1747462613794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if=\"route.path == '/home'\" \r\n+    <div v-if=\"route.path == '/cli'\" \r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n"
+                },
+                {
+                    "date": 1747462619110,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n <template>\r\n   <footer class=\"bg-green-800 text-white py-8\">\r\n-    <div v-if=\"route.path == '/cli'\" \r\n+    <div v-if=\"route.path == '/client'\" \r\n      class=\"hidden md:block\" style=\"margin-top: -200px; margin-left: 10rem; \"  >\r\n            <DotLottieVue class=\"xl:w-100 lg:w-130 md:w-100 sm:w-80\" autoplay loop src=\"https://lottie.host/51cda32a-704b-41fb-8d9f-cf0d35c4382c/6CkZQLPcoY.lottie\" />\r\n     </div>\r\n   <div class=\"max-w-7xl container mx-auto   px-8 sm:px-6 lg:px-8\">\r\n"
                 }
             ],
             "date": 1747034310224,

@@ -1,0 +1,158 @@
+{
+    "sourceFile": "src/modules/admin/dashboard/views/Dashboard.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 35,
+            "patches": [
+                {
+                    "date": 1747318691936,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747318700550,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,1 +1,69 @@\n-ລາຍງານຂໍ້ມູນ\n\\ No newline at end of file\n+<template>\r\n+  <div class=\"dashboard-container\">\r\n+    <h1 class=\"title\">📊 Dashboard ຂອງ Admin</h1>\r\n+    <div class=\"cards\">\r\n+      <div v-for=\"item in reports\" :key=\"item.title\" class=\"card\">\r\n+        <div class=\"icon\">{{ item.icon }}</div>\r\n+        <div class=\"info\">\r\n+          <h2>{{ item.title }}</h2>\r\n+          <p>{{ item.count }} ລາຍການ</p>\r\n+        </div>\r\n+      </div>\r\n+    </div>\r\n+  </div>\r\n+</template>\r\n+\r\n+<script setup>\r\n+import { ref } from 'vue'\r\n+\r\n+const reports = ref([\r\n+  { title: 'ລາຍງານຜູ້ໃຊ້', icon: '👤', count: 120 },\r\n+  { title: 'ລາຍງານນັກສຶກສາ', icon: '🎓', count: 85 },\r\n+  { title: 'ລາຍງານປື້ມເອກະສານ', icon: '📚', count: 350 },\r\n+  { title: 'ຄະແນນ & ຄວາມຄິດເຫັນ', icon: '🌟', count: 67 },\r\n+  { title: 'ລາຍງານສິດ', icon: '🛡️', count: 4 },\r\n+])\r\n+</script>\r\n+\r\n+<style scoped>\r\n+.dashboard-container {\r\n+  padding: 2rem;\r\n+  font-family: sans-serif;\r\n+}\r\n+\r\n+.title {\r\n+  font-size: 28px;\r\n+  margin-bottom: 1.5rem;\r\n+}\r\n+\r\n+.cards {\r\n+  display: flex;\r\n+  flex-wrap: wrap;\r\n+  gap: 1.5rem;\r\n+}\r\n+\r\n+.card {\r\n+  background: #f4f4f4;\r\n+  padding: 1rem;\r\n+  border-radius: 10px;\r\n+  width: 220px;\r\n+  display: flex;\r\n+  align-items: center;\r\n+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\r\n+}\r\n+\r\n+.icon {\r\n+  font-size: 40px;\r\n+  margin-right: 1rem;\r\n+}\r\n+\r\n+.info h2 {\r\n+  font-size: 18px;\r\n+  margin: 0;\r\n+}\r\n+\r\n+.info p {\r\n+  font-size: 14px;\r\n+  color: #555;\r\n+}\r\n+</style>\r\n"
+                },
+                {
+                    "date": 1747318712428,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,14 +1,17 @@\n <template>\r\n-  <div class=\"dashboard-container\">\r\n-    <h1 class=\"title\">📊 Dashboard ຂອງ Admin</h1>\r\n-    <div class=\"cards\">\r\n-      <div v-for=\"item in reports\" :key=\"item.title\" class=\"card\">\r\n-        <div class=\"icon\">{{ item.icon }}</div>\r\n-        <div class=\"info\">\r\n-          <h2>{{ item.title }}</h2>\r\n-          <p>{{ item.count }} ລາຍການ</p>\r\n-        </div>\r\n+  <div class=\"p-6\">\r\n+    <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n+\r\n+    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n+      <div\r\n+        v-for=\"item in reports\"\r\n+        :key=\"item.title\"\r\n+        class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n+      >\r\n+        <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n+        <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n+        <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n       </div>\r\n     </div>\r\n   </div>\r\n </template>\r\n@@ -23,47 +26,4 @@\n   { title: 'ຄະແນນ & ຄວາມຄິດເຫັນ', icon: '🌟', count: 67 },\r\n   { title: 'ລາຍງານສິດ', icon: '🛡️', count: 4 },\r\n ])\r\n </script>\r\n-\r\n-<style scoped>\r\n-.dashboard-container {\r\n-  padding: 2rem;\r\n-  font-family: sans-serif;\r\n-}\r\n-\r\n-.title {\r\n-  font-size: 28px;\r\n-  margin-bottom: 1.5rem;\r\n-}\r\n-\r\n-.cards {\r\n-  display: flex;\r\n-  flex-wrap: wrap;\r\n-  gap: 1.5rem;\r\n-}\r\n-\r\n-.card {\r\n-  background: #f4f4f4;\r\n-  padding: 1rem;\r\n-  border-radius: 10px;\r\n-  width: 220px;\r\n-  display: flex;\r\n-  align-items: center;\r\n-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);\r\n-}\r\n-\r\n-.icon {\r\n-  font-size: 40px;\r\n-  margin-right: 1rem;\r\n-}\r\n-\r\n-.info h2 {\r\n-  font-size: 18px;\r\n-  margin: 0;\r\n-}\r\n-\r\n-.info p {\r\n-  font-size: 14px;\r\n-  color: #555;\r\n-}\r\n-</style>\r\n"
+                },
+                {
+                    "date": 1747384891722,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,6 @@\n <template>\r\n+  div\r\n   <div class=\"p-6\">\r\n     <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n \r\n     <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n"
+                },
+                {
+                    "date": 1747384897858,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  div\r\n+  d\r\n   <div class=\"p-6\">\r\n     <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n \r\n     <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n"
+                },
+                {
+                    "date": 1747384906242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,8 @@\n <template>\r\n-  d\r\n+  <div>\r\n+    \r\n+  </div>\r\n   <div class=\"p-6\">\r\n     <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n \r\n     <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n"
+                },
+                {
+                    "date": 1747384913532,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,20 @@\n <template>\r\n   <div>\r\n-    \r\n-  </div>\r\n-  <div class=\"p-6\">\r\n-    <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n \r\n-    <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n-      <div\r\n-        v-for=\"item in reports\"\r\n-        :key=\"item.title\"\r\n-        class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n-      >\r\n-        <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n-        <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n-        <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n+    <div class=\"p-6\">\r\n+      <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n+  \r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n+        <div\r\n+          v-for=\"item in reports\"\r\n+          :key=\"item.title\"\r\n+          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n+        >\r\n+          <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n+          <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n+          <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n+        </div>\r\n       </div>\r\n     </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1747384922938,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div>\r\n+  <div class>\r\n \r\n     <div class=\"p-6\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n"
+                },
+                {
+                    "date": 1747384928114,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -0,0 +1,32 @@\n+<template>\r\n+  <div class=\"bg-\">\r\n+\r\n+    <div class=\"p-6\">\r\n+      <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n+  \r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n+        <div\r\n+          v-for=\"item in reports\"\r\n+          :key=\"item.title\"\r\n+          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n+        >\r\n+          <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n+          <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n+          <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n+        </div>\r\n+      </div>\r\n+    </div>\r\n+  </div>\r\n+</template>\r\n+\r\n+<script setup>\r\n+import { ref } from 'vue'\r\n+\r\n+const reports = ref([\r\n+  { title: 'ລາຍງານຜູ້ໃຊ້', icon: '👤', count: 120 },\r\n+  { title: 'ລາຍງານນັກສຶກສາ', icon: '🎓', count: 85 },\r\n+  { title: 'ລາຍງານປື້ມເອກະສານ', icon: '📚', count: 350 },\r\n+  { title: 'ຄະແນນ & ຄວາມຄິດເຫັນ', icon: '🌟', count: 67 },\r\n+  { title: 'ລາຍງານສິດ', icon: '🛡️', count: 4 },\r\n+])\r\n+</script>\r\n"
+                },
+                {
+                    "date": 1747384933563,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div class=\"bg-\">\r\n+  <div class=\"bg-pink-50 \">\r\n \r\n     <div class=\"p-6\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n@@ -29,36 +29,4 @@\n   { title: 'ຄະແນນ & ຄວາມຄິດເຫັນ', icon: '🌟', count: 67 },\r\n   { title: 'ລາຍງານສິດ', icon: '🛡️', count: 4 },\r\n ])\r\n </script>\r\n-<template>\r\n-  <div class>\r\n-\r\n-    <div class=\"p-6\">\r\n-      <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n-  \r\n-      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n-        <div\r\n-          v-for=\"item in reports\"\r\n-          :key=\"item.title\"\r\n-          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n-        >\r\n-          <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n-          <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n-          <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n-        </div>\r\n-      </div>\r\n-    </div>\r\n-  </div>\r\n-</template>\r\n-\r\n-<script setup>\r\n-import { ref } from 'vue'\r\n-\r\n-const reports = ref([\r\n-  { title: 'ລາຍງານຜູ້ໃຊ້', icon: '👤', count: 120 },\r\n-  { title: 'ລາຍງານນັກສຶກສາ', icon: '🎓', count: 85 },\r\n-  { title: 'ລາຍງານປື້ມເອກະສານ', icon: '📚', count: 350 },\r\n-  { title: 'ຄະແນນ & ຄວາມຄິດເຫັນ', icon: '🌟', count: 67 },\r\n-  { title: 'ລາຍງານສິດ', icon: '🛡️', count: 4 },\r\n-])\r\n-</script>\r\n"
+                },
+                {
+                    "date": 1747384949013,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n-  <div class=\"bg-pink-50 \">\r\n+  <div class=\"bg-pink-50 p-4\">\r\n \r\n-    <div class=\"p-6\">\r\n+    <div class=\"p-6 bg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n       <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n         <div\r\n"
+                },
+                {
+                    "date": 1747384958106,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"bg-pink-50 p-4\">\r\n \r\n-    <div class=\"p-6 bg\">\r\n+    <div class=\"p-6 bg-white sha\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n       <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n         <div\r\n"
+                },
+                {
+                    "date": 1747384964738,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,8 @@\n <template>\r\n   <div class=\"bg-pink-50 p-4\">\r\n \r\n-    <div class=\"p-6 bg-white sha\">\r\n+    <div class=\"p-6 bg-white shadow rounded-lg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n       <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n         <div\r\n"
+                },
+                {
+                    "date": 1747384985857,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n     <div class=\"p-6 bg-white shadow rounded-lg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n-      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6\">\r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cu\">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n"
+                },
+                {
+                    "date": 1747385096089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n     <div class=\"p-6 bg-white shadow rounded-lg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n-      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cu\">\r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer\">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n@@ -14,8 +14,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n+      \r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747385102889,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n-      \r\n+      <div>\r\n+        \r\n+      </div>\r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747385110794,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n       <div>\r\n-        \r\n+        but\r\n       </div>\r\n     </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1747385117831,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,11 @@\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n       <div>\r\n-        but\r\n+        <button>\r\n+          \r\n+        </button>\r\n       </div>\r\n     </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1747385127811,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         </div>\r\n       </div>\r\n       <div>\r\n         <button>\r\n-          \r\n+          ເບີ່ງລາຍລະອຽດ\r\n         </button>\r\n       </div>\r\n     </div>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1747385133210,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n         </div>\r\n       </div>\r\n       <div>\r\n         <button>\r\n-          ເບີ່ງລາຍລະອຽດ\r\n+          ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n     </div>\r\n   </div>\r\n"
+                },
+                {
+                    "date": 1747385139354,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -15,9 +15,9 @@\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n       <div>\r\n-        <button>\r\n+        <button >\r\n           ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n     </div>\r\n"
+                },
+                {
+                    "date": 1747385174339,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,13 +14,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n       </div>\r\n-      <div>\r\n-        <button >\r\n-          ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n-        </button>\r\n-      </div>\r\n+     \r\n     </div>\r\n   </div>\r\n </template>\r\n \r\n"
+                },
+                {
+                    "date": 1747385183526,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,15 +7,20 @@\n       <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer\">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n-          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition\"\r\n+          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n         >\r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n+         <div>\r\n+        <button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+          ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n+        </button>\r\n       </div>\r\n+      </div>\r\n      \r\n     </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1747385201620,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -13,14 +13,10 @@\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n-         <div>\r\n-        <button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n-          ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n-        </button>\r\n+        \r\n       </div>\r\n-      </div>\r\n      \r\n     </div>\r\n   </div>\r\n </template>\r\n"
+                },
+                {
+                    "date": 1747385229141,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,8 +12,9 @@\n         >\r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n+          \r\n         </div>\r\n         \r\n       </div>\r\n      \r\n"
+                },
+                {
+                    "date": 1747385236863,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,13 @@\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n         >\r\n+        div\r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n-          \r\n+\r\n         </div>\r\n         \r\n       </div>\r\n      \r\n"
+                },
+                {
+                    "date": 1747385243704,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n         >\r\n-        div\r\n+        <div></div>\r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n \r\n"
+                },
+                {
+                    "date": 1747385248829,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,14 @@\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n         >\r\n-        <div></div>\r\n+        <div>\r\n+\r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n+        </div>\r\n \r\n         </div>\r\n         \r\n       </div>\r\n"
+                },
+                {
+                    "date": 1747385270504,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n     <div class=\"p-6 bg-white shadow rounded-lg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n-      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer\">\r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer flex\">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n@@ -15,9 +15,13 @@\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n-\r\n+ <div>\r\n+        <button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+          ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n+        </button>\r\n+      </div>\r\n         </div>\r\n         \r\n       </div>\r\n      \r\n"
+                },
+                {
+                    "date": 1747385288242,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n \r\n     <div class=\"p-6 bg-white shadow rounded-lg\">\r\n       <h1 class=\"text-3xl font-bold mb-6\">📊 Dashboard ຂອງ Admin</h1>\r\n   \r\n-      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer flex\">\r\n+      <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer \">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n           class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n"
+                },
+                {
+                    "date": 1747385340335,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -7,9 +7,9 @@\n       <div class=\"grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 cursor-pointer \">\r\n         <div\r\n           v-for=\"item in reports\"\r\n           :key=\"item.title\"\r\n-          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition \"\r\n+          class=\"bg-white p-6 rounded-xl shadow hover:shadow-lg transition gap-5 flex \"\r\n         >\r\n         <div>\r\n \r\n           <div class=\"text-4xl mb-4\">{{ item.icon }}</div>\r\n"
+                },
+                {
+                    "date": 1747385385305,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n  <div>\r\n-        <button class=\"bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+        <button class=\"bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n           ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747385407139,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n  <div>\r\n-        <button class=\"bg-blue-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+        <button class=\"bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n           ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747385423189,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n  <div>\r\n-        <button class=\"bg-green-500 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+        <button class=\"bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n           ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1747385438734,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -16,9 +16,9 @@\n           <h2 class=\"text-lg font-semibold mb-1\">{{ item.title }}</h2>\r\n           <p class=\"text-gray-600\">{{ item.count }} ລາຍການ</p>\r\n         </div>\r\n  <div>\r\n-        <button class=\"curbg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n+        <button class=\"cursbg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded mt-4\">\r\n           ເບີ່ງລາຍລະອຽດເພີ່ມເຕີມ\r\n         </button>\r\n       </div>\r\n         </div>\r\n"
+                },
+                {
+                    "date": 1748078958836,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -170,9 +170,9 @@\n         text: 'ຈຳນວນຜູ້ໃຊ້'\r\n       }\r\n     }\r\n   }\r\n-}\r\n+},\r\n     })\r\n   })\r\n }\r\n \r\n"
+                }
+            ],
+            "date": 1747318691936,
+            "name": "Commit-0",
+            "content": "ລາຍງານຂໍ້ມູນ"
+        }
+    ]
+}

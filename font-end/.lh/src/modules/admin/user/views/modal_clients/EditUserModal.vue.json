@@ -1,0 +1,126 @@
+{
+    "sourceFile": "src/modules/admin/user/views/modal_clients/EditUserModal.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 27,
+            "patches": [
+                {
+                    "date": 1747742764061,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747742799519,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -31,21 +31,9 @@\n            <div class=\"mb-4\">\r\n              <label class=\"block text-gray-700\">ຊື່</label>\r\n              <input v-model=\"form.firstname\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n            </div>\r\n-         <div class=\"mb-4\">\r\n-             <label class=\"block text-gray-700\">ນາມສະກຸນ</label>\r\n-             <input v-model=\"form.firstname\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n-           </div>\r\n-           <div class=\"mb-4\">\r\n-             <label class=\"block text-gray-700\">ວັນເກີດ</label>\r\n-             <input v-model=\"form.birthday\" type=\"date\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n-           </div>\r\n-         \r\n-           <div class=\"mb-4\">\r\n-             <label class=\"block text-gray-700\">ທີ່ຢູ່</label>\r\n-             <input v-model=\"form.address\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n-           </div>\r\n+      \r\n        </div>\r\n <div>\r\n \r\n     <div class=\"mb-4\">\r\n"
+                },
+                {
+                    "date": 1747979680171,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -34,9 +34,21 @@\n            </div>\r\n       \r\n        </div>\r\n <div>\r\n-\r\n+   <div class=\"mb-4\">\r\n+             <label class=\"block text-gray-700\">ນາມສະກຸນ</label>\r\n+             <input v-model=\"form.firstname\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n+           </div>\r\n+           <div class=\"mb-4\">\r\n+             <label class=\"block text-gray-700\">ວັນເກີດ</label>\r\n+             <input v-model=\"form.birthday\" type=\"date\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n+           </div>\r\n+         \r\n+           <div class=\"mb-4\">\r\n+             <label class=\"block text-gray-700\">ທີ່ຢູ່</label>\r\n+             <input v-model=\"form.address\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n+           </div>\r\n     <div class=\"mb-4\">\r\n       <label class=\"block text-gray-700\">ພະເເນກ</label>\r\n       <input v-model=\"form.department\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n     </div>\r\n@@ -85,9 +97,10 @@\n import { ref, defineProps, defineEmits, watchEffect } from 'vue'\r\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n-  userData: Object\r\n+  userData: Object,\r\n+  \r\n })\r\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n"
+                },
+                {
+                    "date": 1747979685395,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  \r\n+  b\r\n })\r\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n"
+                },
+                {
+                    "date": 1747979714062,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  b\r\n+  boolenstatus: Boolean\r\n })\r\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n@@ -123,8 +123,9 @@\n \r\n watchEffect(() => {\r\n   if (props.show && props.userData) {\r\n     form.value = { ...props.userData }\r\n+    \r\n   }\r\n })\r\n \r\n </script>\r\n"
+                },
+                {
+                    "date": 1747979739022,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,8 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n+  \r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n@@ -123,9 +124,9 @@\n \r\n watchEffect(() => {\r\n   if (props.show && props.userData) {\r\n     form.value = { ...props.userData }\r\n-    \r\n+\r\n   }\r\n })\r\n \r\n </script>\r\n"
+                },
+                {
+                    "date": 1747979754155,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-  \r\n+  boolenstatus\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747979760091,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-  boolenstatus\r\n+  boolenstatus.value = false\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747979914048,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-  boolenstatus.value = false\r\n+  boolenstatus.value = ture\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747979931470,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -92,9 +92,9 @@\n     </div>\r\n   </div>\r\n </template>\r\n \r\n-<script setup leng=\"ts\">\r\n+<script setup lang=\"ts\">\r\n import { ref, defineProps, defineEmits, watchEffect } from 'vue'\r\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-  boolenstatus.value = ture\r\n+  boolenstatus.value = true\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980279028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-  boolenstatus.value = true\r\n+   emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980295043,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -101,12 +101,12 @@\n   userData: Object,\r\n   boolenstatus: Boolean\r\n })\r\n \r\n-const emit = defineEmits(['close', 'update'])\r\n+const emit = defineEmits(['close', 'update',changeBoolenstatus])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', true)\r\n+   emit('changeBoolenstatus', flase)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980315511,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,12 +98,12 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  boolenstatus: Boolean\r\n+  changeBoolenstatus: Boolean\r\n })\r\n \r\n-const emit = defineEmits(['close', 'update',changeBoolenstatus])\r\n+const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n    emit('changeBoolenstatus', flase)\r\n }\r\n"
+                },
+                {
+                    "date": 1747980323528,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', flase)\r\n+   emit('changeBoolenstatus', false)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980348785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', false)\r\n+   emit('changeBoolenstatus', ture)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980367307,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,15 +98,15 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  changeBoolenstatus: Boolean\r\n+  // changeBoolenstatus: Boolean\r\n })\r\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', ture)\r\n+   emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980376881,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', true)\r\n+   emit('changeBoolenstatus', false)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980391723,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', false)\r\n+   emit('changeBoolenstatus', turue)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980398227,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', turue)\r\n+   emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747980475221,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,9 +98,9 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  // changeBoolenstatus: Boolean\r\n+  changeBoolenstatus: Boolean\r\n })\r\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n"
+                },
+                {
+                    "date": 1747980484003,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -98,15 +98,15 @@\n \r\n const props = defineProps({\r\n   show: Boolean,\r\n   userData: Object,\r\n-  changeBoolenstatus: Boolean\r\n+  boolenstatus: Boolean\r\n })\r\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', true)\r\n+   emit('changeBoolenstatus', false)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747982841841,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', false)\r\n+   emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n   code_student: '',\r\n   username: '',\r\n"
+                },
+                {
+                    "date": 1747982858028,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,8 +107,9 @@\n   emit('close') // This should notify the parent to close the modal\r\n    emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n+  \r\n   code_student: '',\r\n   username: '',\r\n   email: '',\r\n   firstname: '',\r\n"
+                },
+                {
+                    "date": 1747982891595,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -107,9 +107,9 @@\n   emit('close') // This should notify the parent to close the modal\r\n    emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n-  \r\n+\r\n   code_student: '',\r\n   username: '',\r\n   email: '',\r\n   firstname: '',\r\n@@ -124,9 +124,9 @@\n })\r\n \r\n watchEffect(() => {\r\n   if (props.show && props.userData) {\r\n-    form.value = { ...props.userData }\r\n+    form.value = { ...props.userData } as typeof form.value\r\n \r\n   }\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1747983047231,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', true)\r\n+   emit('changeBoolenstatus', flase)\r\n }\r\n const form = ref({\r\n \r\n   code_student: '',\r\n@@ -124,9 +124,9 @@\n })\r\n \r\n watchEffect(() => {\r\n   if (props.show && props.userData) {\r\n-    form.value = { ...props.userData } as typeof form.value\r\n+    form.value = { ...props.userData } as typeof form.value;\r\n \r\n   }\r\n })\r\n \r\n"
+                },
+                {
+                    "date": 1747983052919,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', flase)\r\n+   emit('changeBoolenstatus', t)\r\n }\r\n const form = ref({\r\n \r\n   code_student: '',\r\n"
+                },
+                {
+                    "date": 1747986743154,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -104,9 +104,9 @@\n \r\n const emit = defineEmits(['close', 'update','changeBoolenstatus'])\r\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n-   emit('changeBoolenstatus', t)\r\n+   emit('changeBoolenstatus', true)\r\n }\r\n const form = ref({\r\n \r\n   code_student: '',\r\n"
+                },
+                {
+                    "date": 1747986872791,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -106,8 +106,12 @@\n function close() {\r\n   emit('close') // This should notify the parent to close the modal\r\n    emit('changeBoolenstatus', true)\r\n }\r\n+function submitEdit() {\r\n+  // code to handle form submission goes here\r\n+  emit('update', form.value)\r\n+}\r\n const form = ref({\r\n \r\n   code_student: '',\r\n   username: '',\r\n"
+                }
+            ],
+            "date": 1747742764061,
+            "name": "Commit-0",
+            "content": "<!-- src/components/modals/EditUserModal.vue -->\r\n<template>\r\n  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center bg-opacity-50\" style=\"background-color: rgba(0, 0, 0, 0.5);\">\r\n    <div class=\"bg-white w-full max-w-xl rounded-lg shadow p-6 relative\">\r\n      <h2 class=\"text-xl font-bold mb-4  p-4\">ເເກ້ໄຂຜູ້ໃຊ້</h2>\r\n\r\n      <form @submit.prevent=\"submitEdit\" class=\"flex gap-5 justify-between\">\r\n       <div>\r\n            <div >\r\n              <div class=\"ml-25\" >\r\n                <img src=\"../../../../../assets/images/profile-one.webp\" alt=\"no image\" width=\"100\" height=\"100\"/>\r\n              </div>\r\n              <label class=\"block text-sm font-medium\">ຮູບຜູ້ໃຊ້</label>\r\n              <input type=\"file\"  class=\"mt-1 block w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500\" />\r\n            </div>\r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ລະຫັດນັກສືກສາ</label>\r\n             <input v-model=\"form.code_student\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n         \r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ຊື່ຜູ້ໃຊ້</label>\r\n             <input v-model=\"form.username\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n         \r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ອີເມວ</label>\r\n             <input v-model=\"form.email\" type=\"email\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n         \r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ຊື່</label>\r\n             <input v-model=\"form.firstname\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n         <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ນາມສະກຸນ</label>\r\n             <input v-model=\"form.firstname\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ວັນເກີດ</label>\r\n             <input v-model=\"form.birthday\" type=\"date\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n         \r\n           <div class=\"mb-4\">\r\n             <label class=\"block text-gray-700\">ທີ່ຢູ່</label>\r\n             <input v-model=\"form.address\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n           </div>\r\n       </div>\r\n<div>\r\n\r\n    <div class=\"mb-4\">\r\n      <label class=\"block text-gray-700\">ພະເເນກ</label>\r\n      <input v-model=\"form.department\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n    </div>\r\n  \r\n    <div class=\"mb-4\">\r\n      <label class=\"block text-gray-700\">ເບີໂທ</label>\r\n      <input v-model=\"form.phone\" type=\"text\" class=\"w-full border rounded px-3 py-2 mt-1\" />\r\n    </div>\r\n  \r\n    <!-- Boolean checkboxes -->\r\n    <div class=\"grid grid-cols-2 gap-4\">\r\n      <label class=\"flex items-center space-x-2\">\r\n        <input v-model=\"form.is_staff\" type=\"checkbox\" />\r\n        <span>Is Staff</span>\r\n      </label>\r\n  \r\n      <label class=\"flex items-center space-x-2\">\r\n        <input v-model=\"form.is_active\" type=\"checkbox\" />\r\n        <span>Is Active</span>\r\n      </label>\r\n  \r\n      <label class=\"flex items-center space-x-2\">\r\n        <input v-model=\"form.is_superuser\" type=\"checkbox\" />\r\n        <span>Is Superuser</span>\r\n      </label>\r\n  \r\n      <label class=\"flex items-center space-x-2\">\r\n        <input v-model=\"form.is_verify\" type=\"checkbox\" />\r\n        <span>Is Verified</span>\r\n      </label>\r\n    </div>\r\n  \r\n    <div class=\"flex justify-end mt-4\">\r\n      <button type=\"button\" @click=\"close\" class=\"mr-2 px-4 py-2 bg-gray-300 rounded\">Cancel</button>\r\n      <button type=\"submit\" class=\"px-4 py-2 bg-blue-600 text-white rounded\">Save</button>\r\n    </div>\r\n</div>\r\n      </form>\r\n\r\n      <button @click=\"close\" class=\"absolute top-2 right-2 text-gray-500 hover:text-black\">&times;</button>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script setup leng=\"ts\">\r\nimport { ref, defineProps, defineEmits, watchEffect } from 'vue'\r\n\r\nconst props = defineProps({\r\n  show: Boolean,\r\n  userData: Object\r\n})\r\n\r\nconst emit = defineEmits(['close', 'update'])\r\nfunction close() {\r\n  emit('close') // This should notify the parent to close the modal\r\n}\r\nconst form = ref({\r\n  code_student: '',\r\n  username: '',\r\n  email: '',\r\n  firstname: '',\r\n  birthday: '',\r\n  address: '',\r\n  department: '',\r\n  phone: '',\r\n  is_staff: false,\r\n  is_active: false,\r\n  is_superuser: false,\r\n  is_verify: false\r\n})\r\n\r\nwatchEffect(() => {\r\n  if (props.show && props.userData) {\r\n    form.value = { ...props.userData }\r\n  }\r\n})\r\n\r\n</script>\r\n"
+        }
+    ]
+}

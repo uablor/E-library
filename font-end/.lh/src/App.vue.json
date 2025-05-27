@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 6,
+            "activePatchIndex": 7,
             "patches": [
                 {
                     "date": 1747047710751,
@@ -32,6 +32,10 @@
                 {
                     "date": 1747142071835,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   <router-view />\r\n+   <!-- <router-view /> -->\r\n   \r\n </template>\r\n \r\n <style scoped>\r\n"
+                },
+                {
+                    "date": 1747725211633,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,20 +1,14 @@\n <script setup lang=\"ts\">\r\n-import { ref } from \"vue\";\r\n- \r\n-import AppLayout from \"./components/layouts/AppLayout.vue\";\r\n-import DefaultLayout from \"./views/DefaultLayout.vue\";\r\n-import { useRoute } from 'vue-router';\r\n-import router from \"./router\";\r\n \r\n // const route = useRoute();\r\n // const token = ref(localStorage.getItem(\"token\") ?? false);\r\n \r\n </script>\r\n \r\n <template>\r\n   <!-- <AppLayout/> -->\r\n-   <!-- <router-view /> -->\r\n+   <router-view />\r\n   \r\n </template>\r\n \r\n <style scoped>\r\n"
                 }
             ],
             "date": 1747047710751,

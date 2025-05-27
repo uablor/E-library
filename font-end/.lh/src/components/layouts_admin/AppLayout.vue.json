@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/components/layouts_admin/AppLayout.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1747726630785,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747726638820,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n <script setup lang=\"ts\">\r\n import AppTopbar from '../layouts_admin/AppTopbar.vue'\r\n-import AppNavbar from '../layouts_clients/AppNavbar.vue'\r\n-import AppFooter from '../layouts_clients/AppFooter.vue'\r\n-import AppSidebar from '../layouts_clients/AppSidebar.vue'\r\n+import AppNavbar from '../layouts_admin/AppNavbar.vue'\r\n+import AppFooter from '../layouts_admin/AppFooter.vue'\r\n+import AppSidebar from '../layouts_admin/AppSidebar.vue'\r\n import {  ref } from 'vue'\r\n \r\n const sidebarOpen = ref(false) // Shared state\r\n </script>\r\n"
+                }
+            ],
+            "date": 1747726630785,
+            "name": "Commit-0",
+            "content": "<script setup lang=\"ts\">\r\nimport AppTopbar from '../layouts_admin/AppTopbar.vue'\r\nimport AppNavbar from '../layouts_clients/AppNavbar.vue'\r\nimport AppFooter from '../layouts_clients/AppFooter.vue'\r\nimport AppSidebar from '../layouts_clients/AppSidebar.vue'\r\nimport {  ref } from 'vue'\r\n\r\nconst sidebarOpen = ref(false) // Shared state\r\n</script>\r\n\r\n<template>\r\n  <div>\r\n    <AppTopbar />\r\n    <AppNavbar @toggle-sidebar=\"sidebarOpen = !sidebarOpen\" />\r\n    <AppSidebar :open=\"sidebarOpen\" @close=\"sidebarOpen = false\" />\r\n\r\n    <main class=\"layout-main-container surface-ground container mx-auto\">\r\n      <router-view v-slot=\"{ Component }\">\r\n        <template v-if=\"Component\">\r\n          <Suspense>\r\n            <component :is=\"Component\"></component>\r\n            <template #fallback>\r\n              <loading-component />\r\n            </template>\r\n          </Suspense>\r\n        </template>\r\n      </router-view>\r\n    </main>\r\n    <AppFooter />\r\n  </div>\r\n</template>\r\n"
+        }
+    ]
+}

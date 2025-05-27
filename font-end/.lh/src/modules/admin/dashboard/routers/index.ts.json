@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/modules/admin/dashboard/routers/index.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1747318754888,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1747318754888,
+            "name": "Commit-0",
+            "content": "import { roleGuard } from \"@/common/guards/role.guard\";\r\nimport type { RouteRecordRaw } from \"vue-router\";\r\nimport { GET_ROLES } from \"@/common/utils/const\";\r\n\r\nexport const adminDashboardRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/dashboard\",\r\n    name: \"dashboard\",\r\n    component: () => import(\"../views/Dashboard.vue\"),\r\n    meta: {\r\n      label: \"sidebar.dashboard\",\r\n      requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n    },\r\n    beforeEnter: roleGuard,\r\n  }\r\n];\r\n"
+        }
+    ]
+}

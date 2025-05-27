@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/modules/admin/book/entities/type.entity.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1748015553823,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748015559386,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,5 +1,5 @@\n-export interface Category {\r\n+export interface Type {\r\n   id: number\r\n   name: string\r\n   description: string\r\n   created_at: string\r\n"
+                }
+            ],
+            "date": 1748015553823,
+            "name": "Commit-0",
+            "content": "export interface Category {\r\n  id: number\r\n  name: string\r\n  description: string\r\n  created_at: string\r\n  updated_at: string\r\n}"
+        }
+    ]
+}

@@ -1,0 +1,78 @@
+<template>
+  <aside :class="['flex flex-col min-h-screen p-4 shadow-lg transition-width duration-200', is_expanded ? 'w-64' : 'w-16']">
+    <div v-if="is_expanded" class="mb-4">
+      <h2 class="text-black font-semibold text-xl mb-2">Manage</h2>
+      <hr />
+    </div>
+    <div v-else class="mb-4 flex justify-center">
+      <img
+        class="rounded-full shadow-md"
+        width="50"
+        height="auto"
+        src="../../assets/images/Screenshot (240).png"
+        alt="Logo"
+      />
+      <hr class="w-full mt-2" />
+    </div>
+
+    <div class="flex justify-end mb-6">
+      <button
+        class="text-black text-2xl hover:shadow-lg focus:outline-none"
+        @click="ToggleMenu"
+        aria-label="Toggle menu"
+      >
+        <i class="bi bi-list"></i>
+      </button>
+    </div>
+
+    <nav class="flex flex-col space-y-2">
+      <div
+        v-for="item in menuItems"
+        :key="item.name"
+        :class="[
+          'flex items-center cursor-pointer rounded-md px-3 py-2 transition-colors duration-200',
+          isActiveLink(item.path)
+            ? 'bg-yellow-500 text-white'
+            : 'text-gray-900 hover:bg-yellow-400 hover:text-white'
+        ]"
+      >
+        <router-link
+          :to="item.path"
+          class="flex items-center space-x-3 w-full no-underline"
+          :aria-current="isActiveLink(item.path) ? 'page' : undefined"
+        >
+          <span :class="['text-xl', item.icon]"></span>
+          <span v-if="is_expanded" class="font-medium text-sm">
+            {{ item.name }}
+          </span>
+        </router-link>
+      </div>
+      <hr class="border-gray-300 mt-4" />
+    </nav>
+  </aside>
+</template>
+
+<script setup lang="ts">
+import { ref } from 'vue';
+import { useRoute } from 'vue-router';
+
+const is_expanded = ref(false);
+const route = useRoute();
+
+const ToggleMenu = () => {
+  is_expanded.value = !is_expanded.value;
+};
+
+const menuItems = [
+  { name: 'Dashboard', path: '/admin/dashborad', icon: 'bi bi-journal-medical' },
+  { name: 'User', path: '/admin/users', icon: 'bi bi-people-fill' },
+  { name: 'Guest', path: '/admin/guest', icon: 'bi bi-person-fill' },
+  { name: 'Category', path: '/admin/category_brand', icon: 'bi bi-bookmark-check' },
+  { name: 'Product', path: '/admin/product', icon: 'bi bi-cart4' },
+  { name: 'Import', path: '/admin/import_products', icon: 'bi bi-cart-plus' },
+  { name: 'POS', path: '/admin/pos', icon: 'bi bi-file-earmark-post-fill' },
+  { name: 'Report', path: '/admin/reports', icon: 'bi bi-flag' },
+];
+
+const isActiveLink = (path: string) => route.path === path;
+</script>

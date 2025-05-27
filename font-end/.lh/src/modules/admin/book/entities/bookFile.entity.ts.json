@@ -1,0 +1,50 @@
+{
+    "sourceFile": "src/modules/admin/book/entities/bookFile.entity.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 8,
+            "patches": [
+                {
+                    "date": 1748020348129,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748022241739,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,7 +3,7 @@\n   file_url: string\r\n   file_type: string\r\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n-  updated_at: Date\r\n+  updated_at: string\r\n   created_at: Date\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748022623608,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -4,6 +4,11 @@\n   file_type: string\r\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n-  created_at: Date\r\n+  created_at: string\r\n+  book_id: {\r\n+  type: mongoose.Schema.Types.ObjectId,\r\n+  ref: 'Book',\r\n+  required: true,\r\n+},\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748022793211,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,7 @@\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n   created_at: string\r\n-  book_id: {\r\n-  type: mongoose.Schema.Types.ObjectId,\r\n-  ref: 'Book',\r\n-  required: true,\r\n+  book_id: \r\n },\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748022799045,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n   created_at: string\r\n-  book_id: \r\n-},\r\n+  book_id: nu\r\n+\r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748023060659,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n   created_at: string\r\n-  book_id: nu\r\n+  book_id.name: number\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748023073032,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,7 +5,7 @@\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n   created_at: string\r\n-  book_id.name: number\r\n+  book_id_name: string\r\n \r\n }\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1748059936338,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookFile {\r\n   id: number\r\n-  file_url: string\r\n+  file_url: n\r\n   file_type: string\r\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n"
+                },
+                {
+                    "date": 1748062241396,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,7 +1,7 @@\n export interface BookFile {\r\n   id: number\r\n-  file_url: n\r\n+  file_url: string\r\n   file_type: string\r\n   upload_timestamp: string\r\n   deleted_at: Date | null\r\n   updated_at: string\r\n"
+                }
+            ],
+            "date": 1748020348129,
+            "name": "Commit-0",
+            "content": "export interface BookFile {\r\n  id: number\r\n  file_url: string\r\n  file_type: string\r\n  upload_timestamp: string\r\n  deleted_at: Date | null\r\n  updated_at: Date\r\n  created_at: Date\r\n}"
+        }
+    ]
+}

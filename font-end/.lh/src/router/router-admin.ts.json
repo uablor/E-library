@@ -1,0 +1,78 @@
+{
+    "sourceFile": "src/router/router-admin.ts",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 15,
+            "patches": [
+                {
+                    "date": 1747318805824,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747318810896,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import \r\n+import {}\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/about/\",\r\n"
+                },
+                {
+                    "date": 1747318843733,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n+\r\n import {}\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1747318854217,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -2,9 +2,9 @@\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n \r\n-import {}\r\n+import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/about/\",\r\n@@ -14,8 +14,9 @@\n       label: \"sidebar.about\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n     },\r\n+    \r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n   //   path: \"/admin/about/edit/:id\",\r\n"
+                },
+                {
+                    "date": 1747318859892,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n       label: \"sidebar.about\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n     },\r\n-    \r\n+    {\r\n+      ...adminDashboardRoute\r\n+    }\r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n   //   path: \"/admin/about/edit/:id\",\r\n"
+                },
+                {
+                    "date": 1747318880729,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,11 +14,9 @@\n       label: \"sidebar.about\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n     },\r\n-    {\r\n-      ...adminDashboardRoute\r\n-    }\r\n+    \r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n   //   path: \"/admin/about/edit/:id\",\r\n"
+                },
+                {
+                    "date": 1747318889083,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -14,9 +14,11 @@\n       label: \"sidebar.about\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n     },\r\n-    \r\n+    children:[\r\n+      ...adminDashboardRoute\r\n+    ]\r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n   //   path: \"/admin/about/edit/:id\",\r\n"
+                },
+                {
+                    "date": 1747318969994,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -8,9 +8,9 @@\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/about/\",\r\n     name: \"admin.about\",\r\n-    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+    // component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n     meta: {\r\n       label: \"sidebar.about\",\r\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n"
+                },
+                {
+                    "date": 1747318984315,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,16 +6,9 @@\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/admin/about/\",\r\n-    name: \"admin.about\",\r\n-    // component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n-    meta: {\r\n-      label: \"sidebar.about\",\r\n-      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n-      skipAuthCheck: true,\r\n-    },\r\n+   \r\n     children:[\r\n       ...adminDashboardRoute\r\n     ]\r\n     // beforeEnter: roleGuard,\r\n"
+                },
+                {
+                    "date": 1747318990362,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,9 +6,16 @@\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n-   \r\n+    path: \"/admin/about/\",\r\n+    name: \"admin.about\",\r\n+    // component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n+    meta: {\r\n+      label: \"sidebar.about\",\r\n+      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n+      skipAuthCheck: true,\r\n+    },\r\n     children:[\r\n       ...adminDashboardRoute\r\n     ]\r\n     // beforeEnter: roleGuard,\r\n"
+                },
+                {
+                    "date": 1747319503812,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-\r\n+import{}\r\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1747319509998,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import{}\r\n+import {adminUserRoute} \r\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n"
+                },
+                {
+                    "date": 1747319525410,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,9 +1,9 @@\n \r\n import { roleGuard } from \"@/common/guards/role.guard\";\r\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n-import {adminUserRoute} \r\n+import {adminUserRoute} from \"@/modules/admin/user/routers/index\";\r\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n@@ -15,9 +15,10 @@\n       // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n       skipAuthCheck: true,\r\n     },\r\n     children:[\r\n-      ...adminDashboardRoute\r\n+      ...adminDashboardRoute,\r\n+      ...adminUserRoute\r\n     ]\r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n"
+                },
+                {
+                    "date": 1747322045084,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import {adminUserRoute} from \"@/modules/admin/user/routers/index\";\r\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n-\r\n+import \r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/about/\",\r\n     name: \"admin.about\",\r\n"
+                },
+                {
+                    "date": 1747322051017,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -3,9 +3,9 @@\n import type { RouteRecordRaw } from \"vue-router\";\r\n import { GET_ROLES } from \"@/common/utils/const\";\r\n import {adminUserRoute} from \"@/modules/admin/user/routers/index\";\r\n import {adminDashboardRoute} from \"@/modules/admin/dashboard/routers/index\";\r\n-import \r\n+import {}\r\n export const AdminRoute: RouteRecordRaw[] = [\r\n   {\r\n     path: \"/admin/about/\",\r\n     name: \"admin.about\",\r\n"
+                },
+                {
+                    "date": 1747322059363,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -17,9 +17,9 @@\n     },\r\n     children:[\r\n       ...adminDashboardRoute,\r\n       ...adminUserRoute,\r\n-      \r\n+      .\r\n     ]\r\n     // beforeEnter: roleGuard,\r\n   },\r\n   // {\r\n"
+                }
+            ],
+            "date": 1747318805824,
+            "name": "Commit-0",
+            "content": "\r\nimport { roleGuard } from \"@/common/guards/role.guard\";\r\nimport type { RouteRecordRaw } from \"vue-router\";\r\nimport { GET_ROLES } from \"@/common/utils/const\";\r\nimport \r\n\r\nexport const AdminRoute: RouteRecordRaw[] = [\r\n  {\r\n    path: \"/admin/about/\",\r\n    name: \"admin.about\",\r\n    component: () => import(\"@/modules/auth/views/Register.vue\"),\r\n    meta: {\r\n      label: \"sidebar.about\",\r\n      // requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER], \r\n      skipAuthCheck: true,\r\n    },\r\n    // beforeEnter: roleGuard,\r\n  },\r\n  // {\r\n  //   path: \"/admin/about/edit/:id\",\r\n  //   name: \"admin.edit.about\",\r\n  //   component: () => import(\"../views/Edit.vue\"),\r\n  //   meta: {\r\n  //     label: \"sidebar.about\",\r\n  //     requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n  //   },\r\n  //   beforeEnter: roleGuard,\r\n  // },\r\n  // {\r\n  //   path: \"/footer/add\",\r\n  //   name: \"add.footer\",\r\n  //   component: () => import(\"../views/Add-Footer.vue\"),\r\n  //   meta: {\r\n  //     label: \"sidebar.footer\",\r\n  //     requiredRoles: [GET_ROLES.SUPER_ADMIN, GET_ROLES.ADMIN, GET_ROLES.USER],\r\n  //   },\r\n  //   beforeEnter: roleGuard,\r\n  // },\r\n];\r\n"
+        }
+    ]
+}

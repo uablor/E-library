@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 11,
+            "activePatchIndex": 12,
             "patches": [
                 {
                     "date": 1747196943233,
@@ -52,6 +52,10 @@
                 {
                     "date": 1747297322330,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,10 +9,10 @@\n   },\r\n ];\r\n export const BookFilesRoute: RouteRecordRaw[] = [\r\n   {\r\n-    path: \"/client/\",\r\n-    name: \"client-bookDetails\",\r\n+    path: \"/client/bookFiles\",\r\n+    name: \"client-bookFiles\",\r\n     component: () => import(\"../views/BookFile.vue\"),\r\n-    meta: { label: \"cllient.bookDetails\" },\r\n+    meta: { label: \"cllient.\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
+                },
+                {
+                    "date": 1747462154269,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,13 +6,12 @@\n     name: \"client-bookDetails\",\r\n     component: () => import(\"../views/BookDetails.vue\"),\r\n     meta: { label: \"cllient.bookDetails\" },\r\n   },\r\n-];\r\n-export const BookFilesRoute: RouteRecordRaw[] = [\r\n+\r\n   {\r\n     path: \"/client/bookFiles\",\r\n     name: \"client-bookFiles\",\r\n     component: () => import(\"../views/BookFile.vue\"),\r\n-    meta: { label: \"cllient.\" },\r\n+    meta: { label: \"cllient.bookFiles\" },\r\n   },\r\n ];\n\\ No newline at end of file\n"
                 }
             ],
             "date": 1747196943233,

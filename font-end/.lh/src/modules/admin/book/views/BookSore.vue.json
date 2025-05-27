@@ -1,0 +1,38 @@
+{
+    "sourceFile": "src/modules/admin/book/views/BookSore.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 5,
+            "patches": [
+                {
+                    "date": 1748064683805,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1748064957078,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div class=\"flex flex-col sm:flex-row items-center gap-2\">\r\n           <input\r\n             type=\"text\"\r\n             v-model=\"searchQuery\"\r\n-            class=\"px-3 py-2 rounded border shadow-sm\"\r\n+            class=\"bg-green-600 shadow-md text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded-l sm:rounded-l\"\r\n             placeholder=\"ຄົ້ນຫາຕາມຊື່ປື້ມ / ຜູ້ໃຊ້\"\r\n           />\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1748064995302,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n         <div class=\"flex flex-col sm:flex-row items-center gap-2\">\r\n           <input\r\n             type=\"text\"\r\n             v-model=\"searchQuery\"\r\n-            class=\"bg-green-600 shadow-md text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded-l sm:rounded-l\"\r\n+            class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded-r sm:rounded-r\"\r\n             placeholder=\"ຄົ້ນຫາຕາມຊື່ປື້ມ / ຜູ້ໃຊ້\"\r\n           />\r\n         </div>\r\n       </div>\r\n"
+                },
+                {
+                    "date": 1748065243974,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n           <i class=\"fa-solid fa-star\"></i> ຄະແນນປື້ມຂອງຜູ້ໃຊ້\r\n         </h1>\r\n \r\n         <div class=\"flex flex-col sm:flex-row items-center gap-2\">\r\n+            \r\n           <input\r\n             type=\"text\"\r\n             v-model=\"searchQuery\"\r\n             class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded-r sm:rounded-r\"\r\n"
+                },
+                {
+                    "date": 1748065305435,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -5,10 +5,12 @@\n         <h1 class=\"text-2xl sm:text-3xl font-bold text-gray-500\">\r\n           <i class=\"fa-solid fa-star\"></i> ຄະແນນປື້ມຂອງຜູ້ໃຊ້\r\n         </h1>\r\n \r\n-        <div class=\"flex flex-col sm:flex-row items-center gap-2\">\r\n-            \r\n+        <div class=\"flex flex-col sm:flex-row items-center \">\r\n+             <div class=\"bg-green-600 shadow-md text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded-l sm:rounded-l\">\r\n+                  <i class=\"fa-solid fa-magnifying-glass\"></i>\r\n+                </div>\r\n           <input\r\n             type=\"text\"\r\n             v-model=\"searchQuery\"\r\n             class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded-r sm:rounded-r\"\r\n"
+                },
+                {
+                    "date": 1748069400981,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -12,9 +12,9 @@\n                 </div>\r\n           <input\r\n             type=\"text\"\r\n             v-model=\"searchQuery\"\r\n-            class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3  rounded-r sm:rounded-r\"\r\n+            class=\"focus:outline-none text-black shadow-md h-9 py-1 pl-3 p rounded-r sm:rounded-r\"\r\n             placeholder=\"ຄົ້ນຫາຕາມຊື່ປື້ມ / ຜູ້ໃຊ້\"\r\n           />\r\n         </div>\r\n       </div>\r\n"
+                }
+            ],
+            "date": 1748064683805,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div class=\"p-5 bg-pink-50 mb-5\">\r\n    <div class=\"p-6 bg-white shadow-md rounded-lg\">\r\n      <div class=\"flex justify-between items-center mb-4\">\r\n        <h1 class=\"text-2xl sm:text-3xl font-bold text-gray-500\">\r\n          <i class=\"fa-solid fa-star\"></i> ຄະແນນປື້ມຂອງຜູ້ໃຊ້\r\n        </h1>\r\n\r\n        <div class=\"flex flex-col sm:flex-row items-center gap-2\">\r\n          <input\r\n            type=\"text\"\r\n            v-model=\"searchQuery\"\r\n            class=\"px-3 py-2 rounded border shadow-sm\"\r\n            placeholder=\"ຄົ້ນຫາຕາມຊື່ປື້ມ / ຜູ້ໃຊ້\"\r\n          />\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"overflow-x-auto\">\r\n        <table class=\"min-w-full bg-white shadow-md rounded-lg text-sm md:text-base\">\r\n          <thead class=\"bg-gray-100\">\r\n            <tr>\r\n              <th class=\"py-3 px-4\">#</th>\r\n              <th class=\"py-3 px-4\">ຜູ້ໃຊ້</th>\r\n              <th class=\"py-3 px-4\">ຊື່ປື້ມ</th>\r\n              <th class=\"py-3 px-4\">ຄະແນນ</th>\r\n              <th class=\"py-3 px-4\">ຄຳອະທິບາຍ</th>\r\n              <th class=\"py-3 px-4\">ວັນທີສ້າງ</th>\r\n              <th class=\"py-3 px-4\">ອັບເດດລ່າສຸດ</th>\r\n            </tr>\r\n          </thead>\r\n          <tbody>\r\n            <tr\r\n              v-for=\"(score, index) in filteredBookScores\"\r\n              :key=\"index\"\r\n              class=\"border-b text-center hover:bg-green-50\"\r\n            >\r\n              <td class=\"py-2 px-4\">{{ index + 1 }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.User?.fullname || '-' }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.Books?.title || '-' }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.scop_star }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.comment }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.created_at }}</td>\r\n              <td class=\"py-2 px-4\">{{ score.updated_at }}</td>\r\n            </tr>\r\n          </tbody>\r\n        </table>\r\n      </div>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script setup lang=\"ts\">\r\nimport { ref, computed } from 'vue'\r\n\r\ninterface User {\r\n  fullname: string\r\n}\r\n\r\ninterface Book {\r\n  title: string\r\n}\r\n\r\ninterface BookScore {\r\n  User: User\r\n  Books: Book\r\n  comment: string\r\n  scop_star: string\r\n  created_at: string\r\n  updated_at: string\r\n}\r\n\r\nconst searchQuery = ref('')\r\n\r\nconst bookScores = ref<BookScore[]>([\r\n  {\r\n    User: { fullname: 'ທ້າວ ອັນນັນ' },\r\n    Books: { title: 'ປື້ມປະຫວັດສາດ' },\r\n    comment: 'ດີຫຼາຍໆ',\r\n    scop_star: '5',\r\n    created_at: '2024-05-20',\r\n    updated_at: '2024-05-21'\r\n  },\r\n  {\r\n    User: { fullname: 'ນາງ ສຸພາ' },\r\n    Books: { title: 'ນິທານແມວນ້ອຍ' },\r\n    comment: 'ອ່ານງ່າຍ ແລະເຂົ້າໃຈ',\r\n    scop_star: '4',\r\n    created_at: '2024-05-19',\r\n    updated_at: '2024-05-20'\r\n  }\r\n])\r\n\r\nconst filteredBookScores = computed(() => {\r\n  return bookScores.value.filter(score => {\r\n    const user = score.User?.fullname?.toLowerCase() || ''\r\n    const book = score.Books?.title?.toLowerCase() || ''\r\n    const query = searchQuery.value.toLowerCase()\r\n    return user.includes(query) || book.includes(query)\r\n  })\r\n})\r\n</script>\r\n"
+        }
+    ]
+}

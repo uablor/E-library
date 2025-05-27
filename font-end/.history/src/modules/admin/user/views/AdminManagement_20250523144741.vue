@@ -1,0 +1,225 @@
+<template>
+  <div class="p-5 bg-pink-50 mb-5">
+    <div class="p-6 bg-white shadow-md rounded-lg">
+      <!-- Title and controls -->
+      <div class="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 mb-4">
+        <h1 class="text-2xl sm:text-3xl font-bold text-gray-500">
+          <i class="fa-solid fa-users"></i> ຈັດການຜູ້ໃຊ້
+        </h1>
+
+        <!-- Buttons and search -->
+        <div class="flex flex-col sm:flex-row gap-2 sm:gap-4">
+          <div>
+            <div class="py-2 px-4 whitespace-nowrap flex flex-col sm:flex-row space-y-2 sm:space-y-0 sm:space-x-2">
+              <button
+                class="cursor-pointer bg-yellow-500  text-white px-8 py-1 rounded hover:bg-yellow-700 w-full sm:w-auto"
+                @click="openEditModal(selectedUser)" :disabled="!selectedUser"
+                :class="{ 'opacity-50 cursor-not-allowed': !selectedUser }">ເເກ້ໄຂ</button>
+
+              <button
+                class="cursor-pointer bg-red-500  text-white px-8 py-1 rounded hover:bg-red-700 w-full sm:w-auto w-50"
+                @click="deleteUser" :disabled="!selectedUser"
+                :class="{ 'opacity-50 cursor-not-allowed': !selectedUser }">ລືບ</button>
+              <button
+                class="cursor-pointer bg-green-600 text-white px-8 py-1 rounded hover:bg-green-700 w-full sm:w-auto"
+                @click="openAddUser">ເພີ່ມຜູ້ໃຊ້</button>
+            </div>
+
+          </div>
+
+
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center ">
+            <select
+              class="bg-green-600 shadow-md text-white px-2 py-1 h-9 focus:outline-none cursor-pointer rounded-l sm:rounded-l">
+              <option value="all">{{ $t('navbar.all') }}</option>
+            </select>
+            <input type="text" :placeholder="$t('navbar.search') + '..........'"
+              class="focus:outline-none text-black shadow-md h-9 py-1 pl-3 rounded-r sm:rounded-r" />
+          </div>
+        </div>
+      </div>
+
+      <!-- Responsive Table -->
+      <div class="overflow-x-auto">
+        <table class="min-w-full bg-white shadow-md rounded-lg text-sm md:text-base">
+          <thead class="bg-gray-100 text-left">
+            <tr>
+              <th class="py-3 px-4 whitespace-nowrap">Avatar</th>
+              <th class="py-3 px-4 whitespace-nowrap">Username</th>
+              <th class="py-3 px-4 whitespace-nowrap">Email</th>
+              <th class="py-3 px-4 whitespace-nowrap">is_staff</th>
+              <th class="py-3 px-4 whitespace-nowrap">is_active</th>
+              <th class="py-3 px-4 whitespace-nowrap">is_superuser</th>
+              <th class="py-3 px-4 whitespace-nowrap">is_verify</th>
+
+            </tr>
+          </thead>
+          <tbody>
+            <tr v-for="user in users" :key="user.id" @click="selectUser(user)" :class="[
+              'border-b hover:bg-gray-50 cursor-pointer',
+              selectedUser?.id === user.id ? 'bg-yellow-100' : ''
+            ]" class="border-b hover:bg-gray-50">
+              <td class="py-2 px-4 whitespace-nowrap">
+                <img :src="user.avatar" alt="avatar" class="w-10 h-10 rounded-full object-cover" />
+              </td>
+           
+              <!-- <td class="py-2 px-4 whitespace-nowrap">{{ user.avatar }}</td> -->
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.username }}</td>
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.email }}</td>
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.is_staff }}</td>
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.is_active }}</td>
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.is_superuser }}</td>
+              <td class="py-2 px-4 whitespace-nowrap">{{ user.is_verify }}</td>
+
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal addUser -->
+  <AddAdminModal :show="isModalOpen" :user="selectedUser" @close="isModalOpen = false" @save="saveUser" />
+  <!-- Edit Modal -->
+  <EditAdminModal :show="isEditModalOpen" :userData="selectedUser" @close="isEditModalOpen = false"
+    @update="handleUserUpdate" />
+</template>
+
+/*************  ✨ Windsurf Command 🌟  *************/
+<script setup lang="ts">
+
+<script setup >
+import { ref } from 'vue'
+import AddAdminModal from './modal_admin/AddAdminModal.vue'
+import EditAdminModal from './modal_admin/EditAdminModal.vue'
+
+
+const isModalOpen = ref(false)
+const selectedUser = ref<User | null>(null)
+const selectedUser = ref(null)
+
+interface User {
+  id: number
+  avatar: string
+  username: string
+  email: string
+  is_staff: boolean
+  is_active: boolean
+  is_superuser: boolean
+  is_verify: boolean
+}
+
+const users = ref<User[]>([
+const users = ref([
+  {
+    id: 1,
+    avatar: 'https://i.pravatar.cc/150?img=1',
+    username: 'somboun123',
+    email: 'somboun@gmail.com',
+    is_staff: true,
+    is_active: true,
+    is_superuser: false,
+    is_verify: true,
+  },
+  {
+    id: 2,
+    avatar: 'https://i.pravatar.cc/150?img=2',
+    username: 'mani_lao',
+    email: 'mani@email.com',
+    is_staff: false,
+    is_active: true,
+    is_superuser: false,
+    is_verify: true,
+  },
+  {
+    id: 3,
+    avatar: 'https://i.pravatar.cc/150?img=3',
+    username: 'nith_lao',
+    email: 'nith@example.com',
+    is_staff: false,
+    is_active: true,
+    is_superuser: false,
+    is_verify: false,
+  },
+  {
+    id: 4,
+    avatar: 'https://i.pravatar.cc/150?img=4',
+    username: 'khamphou',
+    email: 'khamphou@example.com',
+    is_staff: true,
+    is_active: false,
+    is_superuser: false,
+    is_verify: false,
+  },
+  {
+    id: 5,
+    avatar: 'https://i.pravatar.cc/150?img=5',
+    username: 'vilay_dev',
+    email: 'vilay.dev@gmail.com',
+    is_staff: false,
+    is_active: true,
+    is_superuser: false,
+    is_verify: true,
+  },
+  
+])
+
+
+
+
+
+
+// Open Add Modal
+function openAddUser() {
+  selectedUser.value = {
+    avatar: '',
+    username: '',
+    email: '',
+  }
+  isModalOpen.value = true
+}
+
+// Open Edit Modal
+function openEditUser(user) {
+  selectedUser.value = { ...user }
+  isModalOpen.value = true
+}
+
+// Save from modal
+function saveUser(userData) {
+  const index = users.value.findIndex(u => u.code_student === userData.code_student)
+  if (index !== -1) {
+    users.value[index] = userData
+  } else {
+    users.value.push(userData)
+  }
+  isModalOpen.value = false
+}
+
+// Edit Modal
+const isEditModalOpen = ref(false)
+
+const selectUser = (user) => {
+  selectedUser.value = user
+}
+function openEditModal() {
+  if (!selectedUser.value) {
+    alert('Please select a user before editing.')
+    return
+  }
+
+  isEditModalOpen.value = true
+}
+
+//delete user
+const deleteUser = () => {
+  if (!selectedUser.value) return;
+  const confirmed = confirm("Are you sure you want to delete this user?");
+  if (confirmed) {
+    users.value = users.value.filter((u) => u.id !== selectedUser.value.id);
+    selectedUser.value = null;
+  }
+};
+</script>
+
+/*******  59bff3ae-b7cd-402c-8ed5-e050361290e6  *******/

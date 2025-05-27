@@ -1,0 +1,18 @@
+{
+    "sourceFile": "src/modules/admin/book/components/modal_type/AddTypeModal.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 0,
+            "patches": [
+                {
+                    "date": 1748063106672,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                }
+            ],
+            "date": 1748063106672,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div v-if=\"show\" class=\"fixed inset-0 z-50 bg-opacity-70 flex items-center justify-center\"\r\n    style=\"background-color: rgba(0, 0, 0, 0.5);\">\r\n    <div class=\"bg-white rounded-lg shadow-md w-full max-w-lg p-6 relative\">\r\n      <h2 class=\"text-xl font-semibold text-green-600 mb-4\">\r\n        ເພີ່ມປະເພດປື້ມ\r\n      </h2>\r\n\r\n      <button class=\"absolute top-2 right-2 text-gray-600 hover:text-red-500\" @click=\"$emit('close')\">✕</button>\r\n\r\n      <form @submit.prevent=\"handleSave\">\r\n        <div class=\"mt-4\">\r\n          <label class=\"block text-sm font-medium\">ຊື່ປະເພດ</label>\r\n          <input v-model=\"localBookType.name\"\r\n            class=\"mt-1 block w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500\" />\r\n        </div>\r\n\r\n        <div class=\"mt-4\">\r\n          <label class=\"block text-sm font-medium\">ລາຍລະອຽດ</label>\r\n          <input v-model=\"localBookType.description\"\r\n            class=\"mt-1 block w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500\" />\r\n        </div>\r\n\r\n        <div class=\"mt-4\">\r\n          <label class=\"block text-sm font-medium\">ມື້ທີ່ເພີ່ມ</label>\r\n          <input v-model=\"localBookType.created_at\" type=\"date\"\r\n            class=\"mt-1 block w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500\" />\r\n        </div>\r\n\r\n        <div class=\"mt-4\">\r\n          <label class=\"block text-sm font-medium\">ມື້ທີ່ອັບເດດ</label>\r\n          <input v-model=\"localBookType.updated_at\" type=\"date\"\r\n            class=\"mt-1 block w-full rounded border border-gray-300 px-3 py-2 shadow-sm focus:outline-none focus:ring-2 focus:ring-blue-500\" />\r\n        </div>\r\n\r\n        <div class=\"mt-6 flex justify-end space-x-3\">\r\n          <button type=\"button\" @click=\"$emit('close')\" class=\"px-4 py-2 bg-gray-300 rounded\">ຍົກເລີກ</button>\r\n          <button type=\"submit\" class=\"px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700\">ບັນທຶກ</button>\r\n        </div>\r\n      </form>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script setup lang=\"ts\">\r\nimport { watch, reactive } from 'vue'\r\n\r\nconst props = defineProps({\r\n  show: Boolean,\r\n  bookType: Object,\r\n})\r\n\r\nconst emit = defineEmits(['close', 'save'])\r\n\r\n// const localBookType = reactive({})\r\nconst localBookType = reactive({\r\n  name: '',\r\n  description: '',\r\n  created_at: '',\r\n  updated_at: ''\r\n})\r\n// Sync incoming bookType prop\r\nwatch(\r\n  () => props.bookType,\r\n  (newVal) => {\r\n    Object.assign(localBookType, newVal || {})\r\n  },\r\n  { immediate: true }\r\n)\r\n\r\nfunction handleSave() {\r\n  emit('save', { ...localBookType })\r\n}\r\n</script>\r\n\r\n<style scoped></style>\r\n"
+        }
+    ]
+}

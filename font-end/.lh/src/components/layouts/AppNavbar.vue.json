@@ -3,7 +3,7 @@
     "activeCommit": 0,
     "commits": [
         {
-            "activePatchIndex": 86,
+            "activePatchIndex": 91,
             "patches": [
                 {
                     "date": 1747024208506,
@@ -352,6 +352,26 @@
                 {
                     "date": 1747298703409,
                     "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,8 +6,9 @@\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n                     <router-link to=\"/client/home\">\r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n+                \r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n"
+                },
+                {
+                    "date": 1747314831873,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -6,11 +6,12 @@\n             <div class=\"flex items-center gap-2 w-full sm:w-auto mb-3  sm:mb-0 logo-library\">\r\n                 <div>\r\n                     <router-link to=\"/client/home\">\r\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n-                \r\n+                </router-link>\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n+                    <router-link to=\"/client/home\"></router-link>\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n"
+                },
+                {
+                    "date": 1747314837879,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,12 +9,13 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </router-link>\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n-                    <router-link to=\"/client/home\"></router-link>\r\n+                    <router-link to=\"/client/home\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n+                    </router-link>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n                         <option value=\"all\"><i>{{ $t('navbar.browse') }}</i></option>\r\n                     </select>\r\n \r\n"
+                },
+                {
+                    "date": 1747314849767,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -9,9 +9,9 @@\n                     <img src=\"../../assets/images/Librarylogo.png\" alt=\"Quest College\" class=\"w-40 sm:w-50 mt-3 \" />\r\n                 </router-link>\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n-                    <router-link to=\"/client/home\">\r\n+                    <router-link to=\"/client/profile\">\r\n                     <button class=\"hidden md:block cursor-pointer text-black hover:underline text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     </router-link>\r\n"
+                },
+                {
+                    "date": 1747314916717,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 </router-link>\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <router-link to=\"/client/profile\">\r\n-                    <button class=\"hidden md:block cursor-pointer text-black hover:underline  text-sm sm:text-base\">\r\n+                    <button class=\"hidden md:block cursor-pointer text-black hover:underline m text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     </router-link>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n"
+                },
+                {
+                    "date": 1747314923297,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -10,9 +10,9 @@\n                 </router-link>\r\n                 </div>\r\n                 <div class=\"flex gap-5\">\r\n                     <router-link to=\"/client/profile\">\r\n-                    <button class=\"hidden md:block cursor-pointer text-black hover:underline mt- text-sm sm:text-base\">\r\n+                    <button class=\"hidden md:block cursor-pointer text-black hover:underline mt-3 text-sm sm:text-base\">\r\n                        {{ $t('navbar.mybooks') }}\r\n                     </button>\r\n                     </router-link>\r\n                     <select class=\"hidden md:block text-black px-2 py-1 h-9 focus:outline-none cursor-pointer browse\">\r\n"
                 }
             ],
             "date": 1747024208506,

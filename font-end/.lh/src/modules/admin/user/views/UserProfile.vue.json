@@ -1,0 +1,22 @@
+{
+    "sourceFile": "src/modules/admin/user/views/UserProfile.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 1,
+            "patches": [
+                {
+                    "date": 1747319408000,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747319416329,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,8 +1,78 @@\n-Code student\r\n-User name\r\n-Email\r\n-Fristname\r\n-Birthday\r\n-Address\r\n-Department\r\n-Phone\n\\ No newline at end of file\n+<template>\r\n+  <div class=\"p-6\">\r\n+    <h1 class=\"text-2xl font-bold mb-4\">👥 ຈັດການຜູ້ໃຊ້</h1>\r\n+\r\n+    <div class=\"overflow-x-auto\">\r\n+      <table class=\"min-w-full bg-white shadow-md rounded-lg\">\r\n+        <thead class=\"bg-gray-100 text-left\">\r\n+          <tr>\r\n+            <th class=\"py-3 px-4\">Code Student</th>\r\n+            <th class=\"py-3 px-4\">Username</th>\r\n+            <th class=\"py-3 px-4\">Email</th>\r\n+            <th class=\"py-3 px-4\">Firstname</th>\r\n+            <th class=\"py-3 px-4\">Birthday</th>\r\n+            <th class=\"py-3 px-4\">Address</th>\r\n+            <th class=\"py-3 px-4\">Department</th>\r\n+            <th class=\"py-3 px-4\">Phone</th>\r\n+            <th class=\"py-3 px-4\">Actions</th>\r\n+          </tr>\r\n+        </thead>\r\n+        <tbody>\r\n+          <tr v-for=\"user in users\" :key=\"user.code_student\" class=\"border-b hover:bg-gray-50\">\r\n+            <td class=\"py-2 px-4\">{{ user.code_student }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.username }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.email }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.firstname }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.birthday }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.address }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.department }}</td>\r\n+            <td class=\"py-2 px-4\">{{ user.phone }}</td>\r\n+            <td class=\"py-2 px-4 flex space-x-2\">\r\n+              <button class=\"bg-blue-500 text-white px-3 py-1 rounded\" @click=\"editUser(user)\">Edit</button>\r\n+              <button class=\"bg-red-500 text-white px-3 py-1 rounded\" @click=\"deleteUser(user)\">Delete</button>\r\n+            </td>\r\n+          </tr>\r\n+        </tbody>\r\n+      </table>\r\n+    </div>\r\n+  </div>\r\n+</template>\r\n+\r\n+<script setup>\r\n+import { ref } from 'vue'\r\n+\r\n+const users = ref([\r\n+  {\r\n+    code_student: 'STU001',\r\n+    username: 'somboun123',\r\n+    email: 'somboun@gmail.com',\r\n+    firstname: 'ສົມບູນ',\r\n+    birthday: '2000-01-15',\r\n+    address: 'ເມືອງໄຊເສດຖາ, ແຂວງວຽງຈັນ',\r\n+    department: 'ວິທະຍາສາດຄອມພິວເຕີ',\r\n+    phone: '020 12345678',\r\n+  },\r\n+  {\r\n+    code_student: 'STU002',\r\n+    username: 'mani_lao',\r\n+    email: 'mani@email.com',\r\n+    firstname: 'ມານີ',\r\n+    birthday: '1999-12-10',\r\n+    address: 'ເມືອງສີສັດຕະນາກ, ແຂວງວຽງຈັນ',\r\n+    department: 'ບັນຊີ',\r\n+    phone: '020 98765432',\r\n+  },\r\n+])\r\n+\r\n+function editUser(user) {\r\n+  alert(`Edit user: ${user.username}`)\r\n+  // you can open a modal here to edit\r\n+}\r\n+\r\n+function deleteUser(user) {\r\n+  const confirmed = confirm(`ຕ້ອງການລຶບຜູ້ໃຊ້ ${user.username} ແທ້ບໍ?`)\r\n+  if (confirmed) {\r\n+    users.value = users.value.filter(u => u.code_student !== user.code_student)\r\n+  }\r\n+}\r\n+</script>\r\n"
+                }
+            ],
+            "date": 1747319408000,
+            "name": "Commit-0",
+            "content": "Code student\r\nUser name\r\nEmail\r\nFristname\r\nBirthday\r\nAddress\r\nDepartment\r\nPhone"
+        }
+    ]
+}

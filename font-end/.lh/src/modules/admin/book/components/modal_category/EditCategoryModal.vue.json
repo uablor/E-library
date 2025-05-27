@@ -1,0 +1,42 @@
+{
+    "sourceFile": "src/modules/admin/book/components/modal_category/EditCategoryModal.vue",
+    "activeCommit": 0,
+    "commits": [
+        {
+            "activePatchIndex": 6,
+            "patches": [
+                {
+                    "date": 1747997582163,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n"
+                },
+                {
+                    "date": 1747997698689,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50\">\r\n+  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center  bg-opacity-50\">\r\n     <div class=\"bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative\">\r\n       <h2 class=\"text-xl font-semibold text-gray-700 mb-4\">ແກ້ໄຂໝວກປື້ມ</h2>\r\n \r\n       <div class=\"space-y-4\">\r\n"
+                },
+                {
+                    "date": 1747997704969,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -1,6 +1,6 @@\n <template>\r\n-  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center  bg-opacity-50\">\r\n+  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center  bg-opacity-50\" style=\"background-color: rgba(0, 0, 0, 0.5);\">\r\n     <div class=\"bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative\">\r\n       <h2 class=\"text-xl font-semibold text-gray-700 mb-4\">ແກ້ໄຂໝວກປື້ມ</h2>\r\n \r\n       <div class=\"space-y-4\">\r\n"
+                },
+                {
+                    "date": 1748015252753,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n </template>\r\n \r\n <script setup lang=\"ts\">\r\n import { defineProps, defineEmits, reactive, watch } from 'vue'\r\n-\r\n+import\r\n interface Category {\r\n   id: number\r\n   name: string\r\n   description: string\r\n"
+                },
+                {
+                    "date": 1748015263089,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n </template>\r\n \r\n <script setup lang=\"ts\">\r\n import { defineProps, defineEmits, reactive, watch } from 'vue'\r\n-import\r\n+import { Category } from '../e\r\n interface Category {\r\n   id: number\r\n   name: string\r\n   description: string\r\n"
+                },
+                {
+                    "date": 1748015326360,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n </template>\r\n \r\n <script setup lang=\"ts\">\r\n import { defineProps, defineEmits, reactive, watch } from 'vue'\r\n-import { Category } from '.../entity/category.entity'\r\n+import { Category } from '../entity/category.entity'\r\n interface Category {\r\n   id: number\r\n   name: string\r\n   description: string\r\n"
+                },
+                {
+                    "date": 1748015851529,
+                    "content": "Index: \n===================================================================\n--- \n+++ \n@@ -32,9 +32,9 @@\n </template>\r\n \r\n <script setup lang=\"ts\">\r\n import { defineProps, defineEmits, reactive, watch } from 'vue'\r\n-import { bOOKCategory } from '../../entities/bookCategory.entity'\r\n+import { bOOCategory } from '../../entities/bookCategory.entity'\r\n \r\n \r\n const props = defineProps<{\r\n   show: boolean\r\n"
+                }
+            ],
+            "date": 1747997582163,
+            "name": "Commit-0",
+            "content": "<template>\r\n  <div v-if=\"show\" class=\"fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50\">\r\n    <div class=\"bg-white rounded-lg shadow-lg w-full max-w-md p-6 relative\">\r\n      <h2 class=\"text-xl font-semibold text-gray-700 mb-4\">ແກ້ໄຂໝວກປື້ມ</h2>\r\n\r\n      <div class=\"space-y-4\">\r\n        <div>\r\n          <label class=\"block text-gray-600 mb-1\">ຊື່ໝວກປື້ມ</label>\r\n          <input v-model=\"form.name\" type=\"text\" class=\"w-full px-3 py-2 border border-gray-300 rounded\" />\r\n        </div>\r\n\r\n        <div>\r\n          <label class=\"block text-gray-600 mb-1\">ລາຍລະອຽດ</label>\r\n          <textarea v-model=\"form.description\" class=\"w-full px-3 py-2 border border-gray-300 rounded\"></textarea>\r\n        </div>\r\n      </div>\r\n\r\n      <div class=\"mt-6 flex justify-end space-x-3\">\r\n        <button @click=\"$emit('close')\" class=\"px-4 py-2 bg-gray-400 text-white rounded hover:bg-gray-500\">\r\n          ຍົກເລີກ\r\n        </button>\r\n        <button @click=\"updateCategory\" class=\"px-4 py-2 bg-green-600 text-white rounded hover:bg-green-700\">\r\n          ບັນທຶກ\r\n        </button>\r\n      </div>\r\n\r\n      <button @click=\"$emit('close')\" class=\"absolute top-2 right-2 text-gray-500 hover:text-gray-700\">\r\n        <i class=\"fas fa-times\"></i>\r\n      </button>\r\n    </div>\r\n  </div>\r\n</template>\r\n\r\n<script setup lang=\"ts\">\r\nimport { defineProps, defineEmits, reactive, watch } from 'vue'\r\n\r\ninterface Category {\r\n  id: number\r\n  name: string\r\n  description: string\r\n  created_at: string\r\n  updated_at: string\r\n}\r\n\r\nconst props = defineProps<{\r\n  show: boolean\r\n  userData: Category | null\r\n}>()\r\n\r\nconst emit = defineEmits<{\r\n  (e: 'close'): void\r\n  (e: 'update', updatedCategory: Category): void\r\n}>()\r\n\r\nconst form = reactive({\r\n  id: 0,\r\n  name: '',\r\n  description: '',\r\n  created_at: '',\r\n  updated_at: ''\r\n})\r\n\r\nwatch(\r\n  () => props.userData,\r\n  (newVal) => {\r\n    if (newVal) {\r\n      Object.assign(form, newVal)\r\n    }\r\n  },\r\n  { immediate: true }\r\n)\r\n\r\nfunction updateCategory() {\r\n  emit('update', { ...form })\r\n}\r\n</script>\r\n"
+        }
+    ]
+}
