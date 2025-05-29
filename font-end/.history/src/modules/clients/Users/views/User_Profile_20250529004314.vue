@@ -80,7 +80,7 @@ import { ref } from 'vue'
 const showEditModal = ref(false)
 
 const user = ref({
-  firstname: 'ກົ້ງ',
+  firstname: '',
   lastname: 'ທ່າວ',
   email: 'kongmongthao348@gmail.com',
   phone: '+856 2078961715',

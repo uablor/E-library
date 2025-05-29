@@ -76,12 +76,12 @@
 <script setup lang="ts">
 import { DotLottieVue } from '@lottiefiles/dotlottie-vue'
 import EditUserModal from '../components/EditUserProfile.components.vue'
-import { ref } from 'vue'
+import
 const showEditModal = ref(false)
 
 const user = ref({
-  firstname: 'ກົ້ງ',
-  lastname: 'ທ່າວ',
+  firstname: 'ກອງ',
+  lastname: 'ເທົາ',
   email: 'kongmongthao348@gmail.com',
   phone: '+856 2078961715',
   address: 'ບ້ານ ສີໄລ, ເມືອງໄຊທານີ, ແຂວງ ວຽງຈັນ',

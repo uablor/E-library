@@ -80,8 +80,8 @@ import { ref } from 'vue'
 const showEditModal = ref(false)
 
 const user = ref({
-  firstname: 'ກົ້ງ',
-  lastname: 'ທ່າວ',
+  firstname: 'ກອງ',
+  lastname: 'ເທົາ',
   email: 'kongmongthao348@gmail.com',
   phone: '+856 2078961715',
   address: 'ບ້ານ ສີໄລ, ເມືອງໄຊທານີ, ແຂວງ ວຽງຈັນ',
